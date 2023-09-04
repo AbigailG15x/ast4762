@@ -47,4 +47,124 @@ Explain how you will do the following steps:
 
 *****OUT: Wed Aug 23 19:57:18 EST 2023
 	
+*****IN: Sun Aug 27 19:17 EST 2023
+
+Opened ast4762 folder and opened "homework" subfolder.
+
+Right-clicked > "New" > "Folder" > renamed the folder "hw1_abigailglover".
+
+Navigated to Jupyter website and downloaded Anaconda, Jupyter Lab (3.6.3), and Jupyter Notebook (6.5.4).
+
+After installation completed, the homepage of Anaconda.Navigator came up and I selected JupyterLab > "Launch"
+
+To take a screenshot of the Jupyter Launcher, I clicked in the Windows search bar and typed "Snip". I selected "Snipping Tool" which brought up the toolbar, and selected "New". I clicked and dragged the cursor to select the entire screen, and when I released the left mouse button, the image window appeared. I selected "Save" > changed the name of the file to hw1_abigailglover_problem2_graph1.png per the instructions listed in homework_format_rules.pdf on Webcourses > saved in hw1_abigailglover
+
+To find the version of Python installed, I clicked the Windows search bar and typed "Programs" > selected "Programs and Features" > in the new window searched "Python". This shows the name, publisher, when it was installed, size, and version.
+
+Python Version: 3.11.5150.0
+
+Launched GitHub Desktop app and took a screenshot. Renamed the screenshot hw1_abigailglover_problem2_graph2.png per the instructions listed in homework_format_rules.pdf on Webcourses and saved to hw1_abigailglover.
+
+Opened GitHub on Chrome and navigated to ast4762 folder > typed "git status" > took a screenshot > renamed the screenshot hw1_abigailglover_problem2_graph3.png per the instructions listed in homework_format_rules.pdf on Webcourses and saved to hw1_abigailglover.
+
+To copy my log in my folder, I am going to navigate to the log's location on my desktop > right-click > "copy" > navigate to my hw1_abigailglover folder > right-click > "Paste".
+
+To zip the folder I am going to right-click the hw1_abigailglover folder > select "Send to" > "Compressed (zipped) folder"
+
+To submit the file on Webcourses, I am going to navigate to the appropriate assignment on Webcourses and start the assignment. Select the corresponding compressed (zipped) folder in the Handin folder under "ast4762" and upload. Submit the assignment. 
+
+*****OUT Sun Aug 27 21:51 EST 2023
+
+*****IN Mon Aug 28 17:31 EST 2023
+
+Correction to the previous log. 
+The steps taken for the screenshot regarding the "git status" were incorrect and not valid. This step is not required due to taking the screenshot of the GitHub app in the previous step. 
+
+The file hw1_abigailglover_problem2_graph3.png has been deleted.
+
+Addition to the previous log.
+To demonstrate access to the command line, I opened Powershell as an administrator > typed "ls" > clicked "Enter". I then took two screenshots of the entire output and named them "hw1_abigailglover_problem3_graph1" and "hw1_abigailglover_problem3_graph2". and saved them in the hw1_abigailglover folder.
+
+*****OUT Mon Aug 28 17:43 EST 2023
+
+*****IN Sun Sep 3 12:09 EST 2023
+
+1. Started Ubuntu terminal.
+Navigated to the homework folder linked to Github by using cd /mnt/c/Users/Abigail\ Glover/Documents/Github/ast4762/homework
+Made a new directory using mkdir hw2_abigailglover
+
+In JupyterNotebook, navigated to the same directory and created a new launcher.
+Renamed the file by right-clicking > "Rename" > hw2_abigailglover.ipynb
+
+Wrote required information as comments at the beginning of the file: Name, assignment number, date
+
+2. 
+a.)
+Created an array of integers called 'x' by importing numpy
+Created an array from 0 to 1000 using np.arange
+Imported sys to print complete array without truncation for verification. Left this in the code but made the print statement a comment so it would not print out every time.
+Answering the question in the homework: How many elements were needed?
+Two elements, the starting digit and final digit + 1, were needed to create the array. A total of 1,001 elements were printed in the array when checking the output.
+This answer was typed into the code using the print function print()
+
+Datatype was added using dtype to analyze the array
+Minimum and maximum values were added using python's min() and max() functions
+ 
+b.)
+Changed datatype of the array to contain decimals
+
+***** OUT Sun Sep 3 15:22 EST 2023
+
+***** IN Mon Sep 4 12:19 EST 2023
+Added np.sin to calculate the sin of each value in x. 
+
+Printed both arrays to double-check. Value is still given for sin(2pi) as a very small decimal due to using pi in numpy.
+
+Added print statement for element in y.
+
+Question 2 complete.
+
+Imported appropriate libraries for plotting (matplotlib.pyplot)
+Made a quick plot and then altered the code to make publication-ready
+Saved the plot as a PNG using plt.savefig and the appropriate naming convention
+
+Question 3 complete.
+
+Made ramp array using linspace. 
+
+***** OUT Sun Sep 4 13:58 EST 2023
+
+***** IN Sun Sep 4 14:41 EST 2023
+Watched several videos regarding arrays and different ways to code them
+- Ultimate Guide to NumPy Arrays - VERY DETAILED TUTORIAL for beginners!
+- #51 Python for Beginners: Dealing With Large Numerical Arrays in Python
+-Arrays in Python – What are Python Arrays and how to use them?
+
+Used some of the following sources:
+- Indexing on ndarrays
+- random — Generate pseudo-random numbers
+- Matplotlib tutorials
+
+Watched several videos on randomizing values in Python
+- Python Tutorial: Generate Random Numbers and Data Using the random Module
+- Python random.randint() with Examples
+
+Made a 200x300 array using np.indices and specifying the data type.
+Because my ds9 is still not working, I made sure matplotlib was imported, and used plt.imshow and plt.show to display image with a cmap of 'gray'
+
+The homework states to examine several randomly placed array elements to ensure the y-coordinate matches. I created a few lines of code to randomly generate indices within the array and compare them to the expected outcome.
+
+Wrote a line of code to double-check the arrays data type to ensure it is correct.
+
+***** OUT Sun Sep 4 17:02 EST 2023
+
+***** IN Sun Sep 4 17:19 EST 2023
+
+
+
+
+
+
+
+
 
