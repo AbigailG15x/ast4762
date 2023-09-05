@@ -161,6 +161,49 @@ Wrote a line of code to double-check the arrays data type to ensure it is correc
 ***** IN Sun Sep 4 17:19 EST 2023
 
 
+# Clip (mask) the array using NumPy element-wise operations
+r = np.where(r > 0.5, 0.5, np.where(r < -0.5, -0.5, r))
+
+# Print the clipped array
+print(r)
+
+Accidentally lost/deleted file
+opened new terminal > ipython > '%history -g'
+Copied all code from history into new terminal
+Reorganized and fixed code
+
+Was able to successfully recover all code
+
+Searched for two free software to discuss in question 6
+Wrote the paragraphs in Word to be able to edit
+Transferred, paragraphs to JupyterNotes
+Finalized code to save the data into my file
+
+Reviewed code in its entirety to ensure no errors, spelling was correct, comments, etc
+
+Saved the file as a .py by going to "File" > "Save Notebook as" > "hw2_abigailglover.py"
+
+Pushed to main on GitHub Desktop App
+
+Navigated to Ubuntu terminal and to my ast4762 folder
+Using cp -r, I navigated to the location of my hw2 file and then specified the location for the file to be copied (Handin)
+
+Had to pip install numpy and matplotlib in terminal
+Code is coming back with single error in regards to question 6: no such file or directory
+
+Edited code to try and get the directory in terms of what is typed in the terminal.
+Re-saved and tested again. Same error.
+
+Attempted changing all forward slashed to backwards slashes and tested again.
+Syntax error.
+
+Attempted several other fixes, but kept getting error that directory could not be found for .txt file from question 6
+
+Will use cp to copy log into handin folder
+Will use tar zcf to tar the file before submission
+
+***** OUT Sun Sep 4 22:01 EST 2023
+
 
 
 
