@@ -1,0 +1,424 @@
+Abigail Glover
+Log for AST 4762, Fall 2023
+*****IN: Wed Aug 23 18:44:37 EST 2023
+Opened Notepad, started this log, saved as:
+/Users/Abigail Glover/Desktop/0-ast4762-abigailglover.log
+
+Name: Abigail Glover
+
+Username: abigailglover
+
+What astronomy classes have you taken? I have taken Intro to Astronomy with Lab (AST 2002) and Asteroids, Comets, Meteorites (AST 4142)
+
+Are you generally comfortable with calculus and physics? Yes, I took up to and including Calculus III and Physics II.
+
+Have you ever programmed a computer? No
+
+In what language(s)? N/A
+
+Have you taken a programming class, and if so which? Yes, Intro to C++ and Modeling Methods which used MatLab.
+
+Have you taken statistics or probability? Yes, Statistics for Engineers.
+
+Will you be attending the DPS conference this year, or will you be away otherwise? No
+
+Why are you taking this course? I am taking this as a technical elective for my degree in Mechanical Engineering and as a way to satisfy my Astronomy Minor.
+
+Are there particular topics you hope to learn? My overall goal for this course is to become more comfortable with utilizing coding and programming for research purposes. Specific topics of interest include fitting theoretical models to observed measurements, presenting research, and spectroscopy.
+
+If you have programmed outside of a course before, please briefly describe: N/A
+
+If you have worked with scientific data before, briefly describe your experience: In addition to labwork through my courses, I am also an undergraduate researcher studying the effects of humidity on lunar highlands regolith simulant. This work primarily focuses on evaluating moisture content levels at numerous conditions and at various depths, data which can accumulate quickly if not kept organized. 
+
+Please describe any projects in astronomy, including involvement in amateur groups, owning a telescope, research, etc.: I was part of my high school's Astronomy Club from 2015 to 2016, was the founder and president of my community college's Astronomical Society from 2016 to 2018; a member of the Central Florida Astronomical Society in 2020, am an amateur astrophotographer, and own my own telescope.
+
+Explain how you will do the following steps:
+- Make the folder hw0_<yourname>/.
+	 In my ast4762 folder I have created four sub-folders: Handin, Homework, Lectures, and Literature based on the instructions given in homework_format_rules.pdf. I will double-click the Homework folder. From there, I am going to right-click > select "New" > select "Folder". The new folder will appear with the title "New Folder" highlighted in blue meaning the name cam be adjusted at this time. I will rename the folder "hw0_abigailglover" by typing it in and clicking the enter key. This step is now complete. 
+
+- Copy your log file in your hw0_<yourname>/ folder.
+	To copy my log file to hw0_abigailglover, I will go to its location in Desktop > right-click the file > select "Copy" > navigate to the ast4762 folder also located in Desktop > double-click the "Homework" folder to open > double-click the "hw0_abigailglover" folder to open > right-click > select "Paste". This step is now complete.
+ 
+- Zip the hw0_<yourname>/ folder.
+		In the Homework folder, I am going to right-click the folder "hw0_abigailglover" > click "Send to" > "Compressed (zipped) Folder". This will generate a compressed folder with its title highlighted blue to be renamed. I will then update the name to "hw0_abigailglover". I will then copy this folder into the "Handin" folder as per the instructions listed in homework_format_rules.pdf. The folder is now compressed and this step is complete.
+
+- Submit the zip file to Webcourses.
+	Navigate to the appropriate assignment on Webcourses and start the assignment. Select the corresponding compressed (zipped) folder in the Handin folder under "ast4762" and upload. Submit the assignment. This step is now complete.
+
+*****OUT: Wed Aug 23 19:57:18 EST 2023
+	
+*****IN: Sun Aug 27 19:17 EST 2023
+
+Opened ast4762 folder and opened "homework" subfolder.
+
+Right-clicked > "New" > "Folder" > renamed the folder "hw1_abigailglover".
+
+Navigated to Jupyter website and downloaded Anaconda, Jupyter Lab (3.6.3), and Jupyter Notebook (6.5.4).
+
+After installation completed, the homepage of Anaconda.Navigator came up and I selected JupyterLab > "Launch"
+
+To take a screenshot of the Jupyter Launcher, I clicked in the Windows search bar and typed "Snip". I selected "Snipping Tool" which brought up the toolbar, and selected "New". I clicked and dragged the cursor to select the entire screen, and when I released the left mouse button, the image window appeared. I selected "Save" > changed the name of the file to hw1_abigailglover_problem2_graph1.png per the instructions listed in homework_format_rules.pdf on Webcourses > saved in hw1_abigailglover
+
+To find the version of Python installed, I clicked the Windows search bar and typed "Programs" > selected "Programs and Features" > in the new window searched "Python". This shows the name, publisher, when it was installed, size, and version.
+
+Python Version: 3.11.5150.0
+
+Launched GitHub Desktop app and took a screenshot. Renamed the screenshot hw1_abigailglover_problem2_graph2.png per the instructions listed in homework_format_rules.pdf on Webcourses and saved to hw1_abigailglover.
+
+Opened GitHub on Chrome and navigated to ast4762 folder > typed "git status" > took a screenshot > renamed the screenshot hw1_abigailglover_problem2_graph3.png per the instructions listed in homework_format_rules.pdf on Webcourses and saved to hw1_abigailglover.
+
+To copy my log in my folder, I am going to navigate to the log's location on my desktop > right-click > "copy" > navigate to my hw1_abigailglover folder > right-click > "Paste".
+
+To zip the folder I am going to right-click the hw1_abigailglover folder > select "Send to" > "Compressed (zipped) folder"
+
+To submit the file on Webcourses, I am going to navigate to the appropriate assignment on Webcourses and start the assignment. Select the corresponding compressed (zipped) folder in the Handin folder under "ast4762" and upload. Submit the assignment. 
+
+*****OUT Sun Aug 27 21:51 EST 2023
+
+*****IN Mon Aug 28 17:31 EST 2023
+
+Correction to the previous log. 
+The steps taken for the screenshot regarding the "git status" were incorrect and not valid. This step is not required due to taking the screenshot of the GitHub app in the previous step. 
+
+The file hw1_abigailglover_problem2_graph3.png has been deleted.
+
+Addition to the previous log.
+To demonstrate access to the command line, I opened Powershell as an administrator > typed "ls" > clicked "Enter". I then took two screenshots of the entire output and named them "hw1_abigailglover_problem3_graph1" and "hw1_abigailglover_problem3_graph2". and saved them in the hw1_abigailglover folder.
+
+*****OUT Mon Aug 28 17:43 EST 2023
+
+*****IN Sun Sep 3 12:09 EST 2023
+
+1. Started Ubuntu terminal.
+Navigated to the homework folder linked to Github by using cd /mnt/c/Users/Abigail\ Glover/Documents/Github/ast4762/homework
+Made a new directory using mkdir hw2_abigailglover
+
+In JupyterNotebook, navigated to the same directory and created a new launcher.
+Renamed the file by right-clicking > "Rename" > hw2_abigailglover.ipynb
+
+Wrote required information as comments at the beginning of the file: Name, assignment number, date
+
+2. 
+a.)
+Created an array of integers called 'x' by importing numpy
+Created an array from 0 to 1000 using np.arange
+Imported sys to print complete array without truncation for verification. Left this in the code but made the print statement a comment so it would not print out every time.
+Answering the question in the homework: How many elements were needed?
+Two elements, the starting digit and final digit + 1, were needed to create the array. A total of 1,001 elements were printed in the array when checking the output.
+This answer was typed into the code using the print function print()
+
+Datatype was added using dtype to analyze the array
+Minimum and maximum values were added using python's min() and max() functions
+ 
+b.)
+Changed datatype of the array to contain decimals
+
+***** OUT Sun Sep 3 15:22 EST 2023
+
+***** IN Mon Sep 4 12:19 EST 2023
+Added np.sin to calculate the sin of each value in x. 
+
+Printed both arrays to double-check. Value is still given for sin(2pi) as a very small decimal due to using pi in numpy.
+
+Added print statement for element in y.
+
+Question 2 complete.
+
+Imported appropriate libraries for plotting (matplotlib.pyplot)
+Made a quick plot and then altered the code to make publication-ready
+Saved the plot as a PNG using plt.savefig and the appropriate naming convention
+
+Question 3 complete.
+
+Made ramp array using linspace. 
+
+***** OUT Sun Sep 4 13:58 EST 2023
+
+***** IN Sun Sep 4 14:41 EST 2023
+Watched several videos regarding arrays and different ways to code them
+- Ultimate Guide to NumPy Arrays - VERY DETAILED TUTORIAL for beginners!
+- #51 Python for Beginners: Dealing With Large Numerical Arrays in Python
+-Arrays in Python – What are Python Arrays and how to use them?
+
+Used some of the following sources:
+- Indexing on ndarrays
+- random — Generate pseudo-random numbers
+- Matplotlib tutorials
+
+Watched several videos on randomizing values in Python
+- Python Tutorial: Generate Random Numbers and Data Using the random Module
+- Python random.randint() with Examples
+
+Made a 200x300 array using np.indices and specifying the data type.
+Because my ds9 is still not working, I made sure matplotlib was imported, and used plt.imshow and plt.show to display image with a cmap of 'gray'
+
+The homework states to examine several randomly placed array elements to ensure the y-coordinate matches. I created a few lines of code to randomly generate indices within the array and compare them to the expected outcome.
+
+Wrote a line of code to double-check the arrays data type to ensure it is correct.
+
+***** OUT Sun Sep 4 17:02 EST 2023
+
+***** IN Sun Sep 4 17:19 EST 2023
+
+
+# Clip (mask) the array using NumPy element-wise operations
+r = np.where(r > 0.5, 0.5, np.where(r < -0.5, -0.5, r))
+
+# Print the clipped array
+print(r)
+
+Accidentally lost/deleted file
+opened new terminal > ipython > '%history -g'
+Copied all code from history into new terminal
+Reorganized and fixed code
+
+Was able to successfully recover all code
+
+Searched for two free software to discuss in question 6
+Wrote the paragraphs in Word to be able to edit
+Transferred, paragraphs to JupyterNotes
+Finalized code to save the data into my file
+
+Reviewed code in its entirety to ensure no errors, spelling was correct, comments, etc
+
+Saved the file as a .py by going to "File" > "Save Notebook as" > "hw2_abigailglover.py"
+
+Pushed to main on GitHub Desktop App
+
+Navigated to Ubuntu terminal and to my ast4762 folder
+Using cp -r, I navigated to the location of my hw2 file and then specified the location for the file to be copied (Handin)
+
+Had to pip install numpy and matplotlib in terminal
+Code is coming back with single error in regards to question 6: no such file or directory
+
+Edited code to try and get the directory in terms of what is typed in the terminal.
+Re-saved and tested again. Same error.
+
+Attempted changing all forward slashed to backwards slashes and tested again.
+Syntax error.
+
+Attempted several other fixes, but kept getting error that directory could not be found for .txt file from question 6
+
+Will use cp to copy log into handin folder
+Will use tar zcf to tar the file before submission
+
+***** OUT Sun Sep 4 22:01 EST 2023
+
+
+
+
+
+***** IN Tue Sep  5 07:14:03 EDT 2023
+
+CORRECTIONS MADE TO LOG
+
+- Renamed log file from 0-ast4762-abigailglover.log.log >> 0-ast4762-abigailglover.log to remove the additional '.log'
+- All dates/times up to this point are in the incorrect format. From this point forward in the log, dates/times are directly copied from the terminal > "date"
+
+
+NOTES MOVING FORWARD (Based on feedback)
+
+- Larger gaps placed between OUT and IN times (press "Enter" 5x) to keep the log cleaner and easier to navigate
+- Using ALL CAPS to specify headers
+- Listing homework problems being worked on throughout the log to better find specific information when looking back on log
+
+***** OUT Tue Sep  5 07:20:10 EDT 2023
+
+
+
+
+
+***** IN Thu Sep  7 17:40:10 EDT 2023
+
+- Opened a terminal to request date and time for this log
+- Closed terminal
+
+PEER REVIEW #1
+
+- Downloaded first anonymous peer review > opened terminal > navigated to file location > untarred file with tar zxpf
+- Opened Anaconda > started JupyterLab > Uploaded their .py file to JupyterLab
+- Went through problems 1-5 and left comments
+- Closed their log
+- Closed terminal
+
+PROBLEM 1:
+
+- Opened a new terminal
+- In my terminal I navigated to my ast4762 Folder > Homework > then I made a directory for this homework by: mkdir hw3_abigailglover
+- Verified it was successfully created with 'ls'
+
+- I already had JupiterLab up on my laptop from peer review
+- I clicked the '+' to add a new launcher
+- Renamed that Notebook 'hw3_abigailglover'
+- Saved file into newly created folder
+
+- Commented name, assignment number, and date
+
+
+PROBLEM 2:
+- Wrote print statement for the problem
+- Downloaded module_template_with_docstring.py from Canvas
+- Closed terminal and will close log (due to moving locations)
+
+***** OUT Thu Sep  7 18:07:52 EDT 2023
+
+
+
+
+*****IN Thu Sep  7 18:34:27 EDT 2023
+
+PROBLEM 2 (continued)
+- Copied module_template_with_docstring.py using cp to homework file and renamed hw3_abigail_glover_support_functions per the instructions in homework_format_rules.pdf
+- Downloaded m42 file from Canvas
+- Sudo apt installed unzip to unzip the file from the terminal
+- Unzipped the file using unzip m42_40min_ir.fits
+
+***** OUT Thu Sep  7 19:16:19 EDT 2023
+
+
+
+
+***** IN Sat Sep  9 17:40:37 EDT 2023
+
+PEER REVIEW # 2
+- Opened Canvas and downloaded peer review file.
+- Used terminal to navigate to downloads and untar the file using tar zxpf
+- Opened the .py file in python3 in ubuntu
+- Reviewed and submitted review
+
+PEER REVIEW #3
+- Repeated above steps for final file
+
+HOMEWORK 3 (Continued)
+- Continuing on problem 2b
+- Created a new file and renamed it square, as per the hw3 file and the homework_format_rules
+- Read "Chapter 3: Functions" of Think Python 
+- Worked on function using if, else, and elif statements to determine type of values being entered
+- Code works for integers but ran into an issue with arrays
+- Downloaded Visual Studio Code to aid in debugging function
+- Corrected code and added specifications to formatting for arrays
+- HW file does not specify if we are required to make this code accept .txt files or just user input. I will try to follow-up on this
+- Opened my terminal, navigated to GitHub and made a directory titled hw3_abigailglover 
+- Copied the function file to my GitHub folder using cp
+- Committed to main, then pushed to origin
+
+Problem 2 c
+- Followed each section of the module example provided and added the following to my function: 
+        * Summary
+        * Extended details
+        * Parameters
+        * Returns
+        * Other Parameters
+        * Raises
+        * Notes
+        * References (and other sources)
+        * Examples (included all possible types of encounters)
+
+Problem 2 d
+- TEST CASE 1: Missing imports. Called to libraries that had not been imported
+- TEST CASE 2: Unexecuted code. Code to run doc tests did not run automatically.
+- TEST CASE 3: Unexecuted code. " "
+- TEST CASE 4: ( Added additional code to JupyterLab to test code and executed, but did not run doc string tests. Because of the amount of examples used in docstring I manually input each case to see if the output matched my expectation )
+
+Problem 2 e
+- Saved file and copied into GitHub folder
+- Took a screenshot of GitHub showing updates to code
+- Pushed to main and committed to origin
+
+Problem 2 f
+- Created array and print statement to check
+- Called to square function to square the array
+- Received a NameError due to not calling my function
+- Called function but naming seems incorrect. Instead of calling to my support functions module I had to call directly to square. This is due to misunderstanding the homework instructions and titling my function file square and saving a separate file under the necessary name.
+- To fix this I am going to attempt to delete the empty file and rename the function file
+- ModuleNotFoundError
+- Exported the file as an executable script and reran my main, this corrected the issue. Code runs as expected
+
+
+Problem 2 g
+- Wrote code and received an error that python cannot reshape an array from 0 to 25 (26 elements) into a 5x5 array
+- Changed array to include values from 1 to 24 and the code ran
+
+
+To Do:
+- Send e-mail to Dr. Karalidi in regard to question 2 g and the array size
+
+***** OUT Sat Sep  9 21:46:15 EDT 2023
+
+
+
+
+***** IN Sun Sep 10 21:05:26 EDT 2023
+
+PROBLEM 3
+- Began setting up function using the template provided
+- Wrote docstring providing information on the function
+- Wrote function
+
+Testing function
+- TEST CASE 1 Error regarding libraries. I assumed imported libraries from previous function would carry over. Re-importing functions for this specific function
+- TEST CASE 2 Code printed 5 empty plots with no error code
+- TEST CASE 3 In main, squareplot not defined error
+- TEST CASE 4 Cannot import function, overwrote existing .py file with new function
+- TEST CASE 5 Same error
+
+***** OUT Sun Sep 10 22:29:22 EDT 2023
+
+
+
+
+***** IN Tue Sep 12 11:12:37 EDT 2023
+- TEST CASE 6 Attempted splitting the functions into separate files and calling to them from the main, received a modulenotfound error
+
+Keep running into a "module not found" error. Python is trying to pull the function from somewhere else.
+Moving on to problem 4 for the time being.
+
+PROBLEM 4
+- pip installed astropy
+- wrote code for question 4
+- Referred back to week 3 module for code on .fits files and how to read the data
+- TEST CASE 1 Ran into an error because I forgot to close some parenthesis
+- TEST CASE 2 Code ran with no issues, so I adjusted spacing and added in the print statements answering the question in the homework file
+
+PROBLEM 5
+- Running into same issues with function
+- Restarted kernals, laptop, and Jupyter with no luck
+- Began messing with different ways to find path to function
+- imported and rephrased how I called the square function
+- THIS FIXED THE ERROR FOR Q1
+- New error for Q3 with saveplot
+- Q5 now runs, still with errors in Q3
+
+***** OUT Tue Sep 12 15:46:07 EDT 2023
+
+
+
+
+
+***** IN Wed Sep 13 08:40:37 EDT 2023
+
+NOTE: I was on for a couple of hours Tues Sep 12 after 22:00. My computer crashed and would not reboot. Log was lost for that time frame but work was saved due to pushing through to GitHub.
+
+Problem 3 is still not plotting correctly.
+- Traceback error
+- Input error
+- Successfully produces a graph in Jupyter with the incorrect axes, and no data
+- PDF of the graph is a blank image
+- Because it is close to the submission deadline, I am going to submit the code as is.
+
+Problem 6
+- On Jupyter, navigated to File > Save as > Executable Script
+
+
+
+
+
+
+
+
+
+
+
+
+
+

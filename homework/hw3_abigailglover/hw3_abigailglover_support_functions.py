@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[32]:
+# In[3]:
 
 
 # This is my square function
@@ -151,6 +151,173 @@ def load_input_from_txt(filename):
         return ast.literal_eval(content)  # Safely evaluate Python literals
     except Exception as e:
         raise ValueError("Error loading input from the .txt file: " + str(e))
+
+
+# In[12]:
+
+
+# Problem 3
+
+# Square Plot
+# Function's docstring
+
+
+''' This function plots the squares of numbers.
+
+This function has three positional arguments: the 
+low end of the range, the high end of the range 
+(inclusive), and the number of points to plot over 
+this range.
+
+Parameters
+-------------------
+low: Demonstrates the low end of the range.
+high: Demonstrates the high end of the range (inclusive).
+num_points: The number of points to plot over the range.
+
+Returns
+-------------------
+saveplot: Saves the plot as a file
+
+Other Parameters
+-------------------
+
+Raises
+-------------------
+
+
+Notes
+-------------------
+
+References
+-------------------
+. . [1] Downy, A., 2015, "Think Python: How to Think Like a Computer Scientist",
+Green Tea Press, pgs(17 - 26, 41-45).
+
+Other Sources:
+- https://pymotw.com/2/doctest/
+
+Examples:
+--------------------
+Tring:
+>>> numbers_to_plot = [1, 2, 3, 4, 5]
+Expecting:
+>>> x = [1, 2, 3, 4, 5]
+    y[num] = [1, 4, 9, 16, 25]
+
+
+End of docstring. '''
+
+# Import libraries
+import numpy as np
+import matplotlib.pyplot as plt
+
+def squareplot(low, high, numbers_to_plot, saveplot=False):
+    
+    # Create an array of evenly spaced points from low to high using numbers_to_plot
+    x = np.linspace(low, high, numbers_to_plot)
+    
+    # Calculate the square of the input values using the square function
+    y = np.square(x)
+    
+    # Create a plot
+    plt.plot(x, y)
+    
+    # Label the axes and title
+    plt.xlabel('Input')
+    plt.ylabel('Output')
+    plt.title('Square Function')
+    
+    # Save the plot as an image file
+    if saveplot is not None:
+        if saveplot is True or isinstance(saveplot, str):
+            if saveplot is True:
+                saveplot = "hw3_abigailglover_problem3_graph1.pdf"
+            plt.savefig(saveplot, format="pdf")
+    
+    # Show the plot
+    plt.show()
+
+
+# In[11]:
+
+
+''' This function scales an array.
+
+This function scales linearly by taking as input
+a floating array and returning an array of 8-bit,
+unsigned integers of the same shape.
+
+Parameters
+-------------------
+arr: input array values
+
+Returns
+-------------------
+scaled_arr: returns the scaled array in the new 
+format
+
+Other Parameters/Operations
+-------------------
+min_value: calculates the minimum value for the
+input array
+max_value: calculates the maximum value for the
+input array
+
+Raises
+-------------------
+N/A
+
+Notes
+-------------------
+
+References
+-------------------
+. . [1] Downy, A., 2015, "Think Python: How to Think Like a Computer Scientist",
+Green Tea Press, pgs(17 - 26, 41-45).
+
+Other Sources:
+- https://pymotw.com/2/doctest/
+
+Examples:
+--------------------
+# Example 1 - Positive integers
+Trying:
+>>> arr1 = np.array([1, 2, 3, 4, 5])
+Expecting: 
+[  0  63 127 191 255]
+
+# Example 2 - Negative values
+Trying:
+>>> arr2 = np.array([-5, -4, -3, -2, -1])
+Expecting:
+[  0  63 127 191 255]
+
+# Example 3: Mixed positive/negative/decimals
+Trying:
+>>> arr3 = np.array([-2, 0, 2.5, 4, -6.3])
+Expecting:
+[106 155 217 254   0]
+
+End of docstring. '''
+
+# Problem 5
+def scale(arr):
+    
+    # Calculate the minimum and maximum values in the array
+    min_val = np.min(arr)
+    max_val = np.max(arr)
+    
+    # Perform linear scaling
+    scaled_arr = (255 * (arr - min_val)) / (max_val - min_val)
+    
+    # Clip values to ensure they are in the valid range for uint8
+    scaled_arr = np.clip(scaled_arr, 0, 255)
+    
+    # Convert the result to 8-bit unsigned integers
+    scaled_arr = scaled_arr.astype(np.uint8)
+    
+    return scaled_arr
 
 
 # In[ ]:
