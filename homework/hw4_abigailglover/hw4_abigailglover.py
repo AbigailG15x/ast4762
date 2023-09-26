@@ -77,7 +77,7 @@ bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2
 expected_counts = N * norm.pdf(bin_centers, loc = sigma, scale = cx)
 
 # Plot the Histogram
-plt.hist(sample, bins = np.arange(0, 101, 1), density = True, edgecolor = 'black', color = 'firebrick', label = 'Histogram')
+plt.hist(sample, bins = np.arange(0, 101, 1), density = True, edgecolor = 'black', color = 'firebrick')
 
 # Plot the Gaussian and ensure that it is scaled to the histogram
 # Base code from GeeksforGeeks and modified for my parameters
