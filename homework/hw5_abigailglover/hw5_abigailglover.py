@@ -59,7 +59,7 @@ print(f'a value of {mean : .2f}, the median is closer to N.')
 
 
 # Problem number
-print('Part b.)')
+print('\nPart b.)')
 print(f'\nThe standard deviation of the sample is: {std_dev: .2f}')
 
 # Define the lower and upper bounds for the subsample
@@ -96,7 +96,7 @@ print('The mean is now closer to the median (as expected) and the \
 
 
 # Problem number
-print('Part c.)')
+print('\nPart c.)')
 
 # Define the lower and upper bounds for the sub-subsample
 lower_bound_subsub = median_subsample - 5 * std_dev_subsample
@@ -163,7 +163,7 @@ print('\nNo, this method will remove most of them but not necessarily all. \
 
 
 # Problem number
-print('Problem 3')
+print('\nProblem 3')
 
 # Function sigrej created as hw5_abigailglover_support_functions
 # Import the function
@@ -177,7 +177,7 @@ cleaned_data = result_array[cleaned_mask]
 
 # Print the mean of the cleaned data set
 cleaned_mean = np.mean(cleaned_data) # Calculate the mean
-print(f'\nThe mean of the cleaned data using the sigreg function is: {cleaned_mean : .2f} .') # Print the result
+print(f'\nThe mean of the cleaned data using the sigrej function is: {cleaned_mean : .2f} .') # Print the result
 
 # Compare the calculated mean with the previous step
 if cleaned_mean == mean_subsubsample :
@@ -190,7 +190,7 @@ else :
 
 
 # Problem number
-print('Problem 4')
+print('\nProblem 4')
 print('Part A.)')
 
 # Define symbols
@@ -216,7 +216,7 @@ print('σ𝑓 =', σ𝑓)
 
 
 # Problem Number
-print('Part B.)\n')
+print('\nPart B.)\n')
 
 # Part a.) - d.)
 
@@ -237,7 +237,7 @@ print('d.)', x / y, '+-', np.sqrt( ( x * dy )**2 + ( y * dx )**2 ) )
 
 
 # Problem number
-print('Problem 5')
+print('\nProblem 5')
 print('Part a.)')
 
 # Create sample of 100 draws from uniform distribution between 0 and 10
@@ -261,7 +261,7 @@ plt.title('Synthetic Dataset with Measurement Errors')
 plt.legend()
 
 # Save plot
-#plt.savefig('hw5_abigailglover_problem5_graph1.png')
+plt.savefig('hw5_abigailglover_problem5_graph1.png')
 
 # Show plot
 plt.show()
@@ -271,7 +271,7 @@ plt.show()
 
 
 # Problem number
-print('Part b.)\n')
+print('\nPart b.)\n')
 
 # Use the linfit function to fit a linear model
 # linfit pulled from week 4 module
@@ -318,7 +318,7 @@ print('\nYes, both parameters are within 3σ of the parameters of the true line.
 
 
 # Problem number
-print('Part c.)')
+print('\nPart c.)')
 
 # Calculate the chi-squared value for the fit
 df = len(synthetic_data) - 2
@@ -343,7 +343,7 @@ plt.title("Linear Fit of Data")
 plt.legend()
 
 # Save the plot as a PNG file
-plt.savefig("hw5_abigailglover_problem5_graph1.png")
+plt.savefig("hw5_abigailglover_problem5_graph2.png")
 
 # Show the plot (optional)
 plt.show()
@@ -353,7 +353,7 @@ plt.show()
 
 
 # Problem number
-print('Part d.)')
+print('\nPart d.)')
 
 # Copied and pasted most of the code from the previous steps
 # The following is in a docstring so that it does not run in
