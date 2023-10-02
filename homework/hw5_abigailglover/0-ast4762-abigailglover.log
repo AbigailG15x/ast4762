@@ -1,0 +1,831 @@
+Abigail Glover
+Log for AST 4762, Fall 2023
+*****IN: Wed Aug 23 18:44:37 EST 2023
+Opened Notepad, started this log, saved as:
+/Users/Abigail Glover/Desktop/0-ast4762-abigailglover.log
+
+Name: Abigail Glover
+
+Username: abigailglover
+
+What astronomy classes have you taken? I have taken Intro to Astronomy with Lab (AST 2002) and Asteroids, Comets, Meteorites (AST 4142)
+
+Are you generally comfortable with calculus and physics? Yes, I took up to and including Calculus III and Physics II.
+
+Have you ever programmed a computer? No
+
+In what language(s)? N/A
+
+Have you taken a programming class, and if so which? Yes, Intro to C++ and Modeling Methods which used MatLab.
+
+Have you taken statistics or probability? Yes, Statistics for Engineers.
+
+Will you be attending the DPS conference this year, or will you be away otherwise? No
+
+Why are you taking this course? I am taking this as a technical elective for my degree in Mechanical Engineering and as a way to satisfy my Astronomy Minor.
+
+Are there particular topics you hope to learn? My overall goal for this course is to become more comfortable with utilizing coding and programming for research purposes. Specific topics of interest include fitting theoretical models to observed measurements, presenting research, and spectroscopy.
+
+If you have programmed outside of a course before, please briefly describe: N/A
+
+If you have worked with scientific data before, briefly describe your experience: In addition to labwork through my courses, I am also an undergraduate researcher studying the effects of humidity on lunar highlands regolith simulant. This work primarily focuses on evaluating moisture content levels at numerous conditions and at various depths, data which can accumulate quickly if not kept organized. 
+
+Please describe any projects in astronomy, including involvement in amateur groups, owning a telescope, research, etc.: I was part of my high school's Astronomy Club from 2015 to 2016, was the founder and president of my community college's Astronomical Society from 2016 to 2018; a member of the Central Florida Astronomical Society in 2020, am an amateur astrophotographer, and own my own telescope.
+
+Explain how you will do the following steps:
+- Make the folder hw0_<yourname>/.
+	 In my ast4762 folder I have created four sub-folders: Handin, Homework, Lectures, and Literature based on the instructions given in homework_format_rules.pdf. I will double-click the Homework folder. From there, I am going to right-click > select "New" > select "Folder". The new folder will appear with the title "New Folder" highlighted in blue meaning the name cam be adjusted at this time. I will rename the folder "hw0_abigailglover" by typing it in and clicking the enter key. This step is now complete. 
+
+- Copy your log file in your hw0_<yourname>/ folder.
+	To copy my log file to hw0_abigailglover, I will go to its location in Desktop > right-click the file > select "Copy" > navigate to the ast4762 folder also located in Desktop > double-click the "Homework" folder to open > double-click the "hw0_abigailglover" folder to open > right-click > select "Paste". This step is now complete.
+ 
+- Zip the hw0_<yourname>/ folder.
+		In the Homework folder, I am going to right-click the folder "hw0_abigailglover" > click "Send to" > "Compressed (zipped) Folder". This will generate a compressed folder with its title highlighted blue to be renamed. I will then update the name to "hw0_abigailglover". I will then copy this folder into the "Handin" folder as per the instructions listed in homework_format_rules.pdf. The folder is now compressed and this step is complete.
+
+- Submit the zip file to Webcourses.
+	Navigate to the appropriate assignment on Webcourses and start the assignment. Select the corresponding compressed (zipped) folder in the Handin folder under "ast4762" and upload. Submit the assignment. This step is now complete.
+
+*****OUT: Wed Aug 23 19:57:18 EST 2023
+	
+*****IN: Sun Aug 27 19:17 EST 2023
+
+Opened ast4762 folder and opened "homework" subfolder.
+
+Right-clicked > "New" > "Folder" > renamed the folder "hw1_abigailglover".
+
+Navigated to Jupyter website and downloaded Anaconda, Jupyter Lab (3.6.3), and Jupyter Notebook (6.5.4).
+
+After installation completed, the homepage of Anaconda.Navigator came up and I selected JupyterLab > "Launch"
+
+To take a screenshot of the Jupyter Launcher, I clicked in the Windows search bar and typed "Snip". I selected "Snipping Tool" which brought up the toolbar, and selected "New". I clicked and dragged the cursor to select the entire screen, and when I released the left mouse button, the image window appeared. I selected "Save" > changed the name of the file to hw1_abigailglover_problem2_graph1.png per the instructions listed in homework_format_rules.pdf on Webcourses > saved in hw1_abigailglover
+
+To find the version of Python installed, I clicked the Windows search bar and typed "Programs" > selected "Programs and Features" > in the new window searched "Python". This shows the name, publisher, when it was installed, size, and version.
+
+Python Version: 3.11.5150.0
+
+Launched GitHub Desktop app and took a screenshot. Renamed the screenshot hw1_abigailglover_problem2_graph2.png per the instructions listed in homework_format_rules.pdf on Webcourses and saved to hw1_abigailglover.
+
+Opened GitHub on Chrome and navigated to ast4762 folder > typed "git status" > took a screenshot > renamed the screenshot hw1_abigailglover_problem2_graph3.png per the instructions listed in homework_format_rules.pdf on Webcourses and saved to hw1_abigailglover.
+
+To copy my log in my folder, I am going to navigate to the log's location on my desktop > right-click > "copy" > navigate to my hw1_abigailglover folder > right-click > "Paste".
+
+To zip the folder I am going to right-click the hw1_abigailglover folder > select "Send to" > "Compressed (zipped) folder"
+
+To submit the file on Webcourses, I am going to navigate to the appropriate assignment on Webcourses and start the assignment. Select the corresponding compressed (zipped) folder in the Handin folder under "ast4762" and upload. Submit the assignment. 
+
+*****OUT Sun Aug 27 21:51 EST 2023
+
+*****IN Mon Aug 28 17:31 EST 2023
+
+Correction to the previous log. 
+The steps taken for the screenshot regarding the "git status" were incorrect and not valid. This step is not required due to taking the screenshot of the GitHub app in the previous step. 
+
+The file hw1_abigailglover_problem2_graph3.png has been deleted.
+
+Addition to the previous log.
+To demonstrate access to the command line, I opened Powershell as an administrator > typed "ls" > clicked "Enter". I then took two screenshots of the entire output and named them "hw1_abigailglover_problem3_graph1" and "hw1_abigailglover_problem3_graph2". and saved them in the hw1_abigailglover folder.
+
+*****OUT Mon Aug 28 17:43 EST 2023
+
+*****IN Sun Sep 3 12:09 EST 2023
+
+1. Started Ubuntu terminal.
+Navigated to the homework folder linked to Github by using cd /mnt/c/Users/Abigail\ Glover/Documents/Github/ast4762/homework
+Made a new directory using mkdir hw2_abigailglover
+
+In JupyterNotebook, navigated to the same directory and created a new launcher.
+Renamed the file by right-clicking > "Rename" > hw2_abigailglover.ipynb
+
+Wrote required information as comments at the beginning of the file: Name, assignment number, date
+
+2. 
+a.)
+Created an array of integers called 'x' by importing numpy
+Created an array from 0 to 1000 using np.arange
+Imported sys to print complete array without truncation for verification. Left this in the code but made the print statement a comment so it would not print out every time.
+Answering the question in the homework: How many elements were needed?
+Two elements, the starting digit and final digit + 1, were needed to create the array. A total of 1,001 elements were printed in the array when checking the output.
+This answer was typed into the code using the print function print()
+
+Datatype was added using dtype to analyze the array
+Minimum and maximum values were added using python's min() and max() functions
+ 
+b.)
+Changed datatype of the array to contain decimals
+
+***** OUT Sun Sep 3 15:22 EST 2023
+
+***** IN Mon Sep 4 12:19 EST 2023
+Added np.sin to calculate the sin of each value in x. 
+
+Printed both arrays to double-check. Value is still given for sin(2pi) as a very small decimal due to using pi in numpy.
+
+Added print statement for element in y.
+
+Question 2 complete.
+
+Imported appropriate libraries for plotting (matplotlib.pyplot)
+Made a quick plot and then altered the code to make publication-ready
+Saved the plot as a PNG using plt.savefig and the appropriate naming convention
+
+Question 3 complete.
+
+Made ramp array using linspace. 
+
+***** OUT Sun Sep 4 13:58 EST 2023
+
+***** IN Sun Sep 4 14:41 EST 2023
+Watched several videos regarding arrays and different ways to code them
+- Ultimate Guide to NumPy Arrays - VERY DETAILED TUTORIAL for beginners!
+- #51 Python for Beginners: Dealing With Large Numerical Arrays in Python
+-Arrays in Python – What are Python Arrays and how to use them?
+
+Used some of the following sources:
+- Indexing on ndarrays
+- random — Generate pseudo-random numbers
+- Matplotlib tutorials
+
+Watched several videos on randomizing values in Python
+- Python Tutorial: Generate Random Numbers and Data Using the random Module
+- Python random.randint() with Examples
+
+Made a 200x300 array using np.indices and specifying the data type.
+Because my ds9 is still not working, I made sure matplotlib was imported, and used plt.imshow and plt.show to display image with a cmap of 'gray'
+
+The homework states to examine several randomly placed array elements to ensure the y-coordinate matches. I created a few lines of code to randomly generate indices within the array and compare them to the expected outcome.
+
+Wrote a line of code to double-check the arrays data type to ensure it is correct.
+
+***** OUT Sun Sep 4 17:02 EST 2023
+
+***** IN Sun Sep 4 17:19 EST 2023
+
+
+# Clip (mask) the array using NumPy element-wise operations
+r = np.where(r > 0.5, 0.5, np.where(r < -0.5, -0.5, r))
+
+# Print the clipped array
+print(r)
+
+Accidentally lost/deleted file
+opened new terminal > ipython > '%history -g'
+Copied all code from history into new terminal
+Reorganized and fixed code
+
+Was able to successfully recover all code
+
+Searched for two free software to discuss in question 6
+Wrote the paragraphs in Word to be able to edit
+Transferred, paragraphs to JupyterNotes
+Finalized code to save the data into my file
+
+Reviewed code in its entirety to ensure no errors, spelling was correct, comments, etc
+
+Saved the file as a .py by going to "File" > "Save Notebook as" > "hw2_abigailglover.py"
+
+Pushed to main on GitHub Desktop App
+
+Navigated to Ubuntu terminal and to my ast4762 folder
+Using cp -r, I navigated to the location of my hw2 file and then specified the location for the file to be copied (Handin)
+
+Had to pip install numpy and matplotlib in terminal
+Code is coming back with single error in regards to question 6: no such file or directory
+
+Edited code to try and get the directory in terms of what is typed in the terminal.
+Re-saved and tested again. Same error.
+
+Attempted changing all forward slashed to backwards slashes and tested again.
+Syntax error.
+
+Attempted several other fixes, but kept getting error that directory could not be found for .txt file from question 6
+
+Will use cp to copy log into handin folder
+Will use tar zcf to tar the file before submission
+
+***** OUT Sun Sep 4 22:01 EST 2023
+
+
+
+
+
+***** IN Tue Sep  5 07:14:03 EDT 2023
+
+CORRECTIONS MADE TO LOG
+
+- Renamed log file from 0-ast4762-abigailglover.log.log >> 0-ast4762-abigailglover.log to remove the additional '.log'
+- All dates/times up to this point are in the incorrect format. From this point forward in the log, dates/times are directly copied from the terminal > "date"
+
+
+NOTES MOVING FORWARD (Based on feedback)
+
+- Larger gaps placed between OUT and IN times (press "Enter" 5x) to keep the log cleaner and easier to navigate
+- Using ALL CAPS to specify headers
+- Listing homework problems being worked on throughout the log to better find specific information when looking back on log
+
+***** OUT Tue Sep  5 07:20:10 EDT 2023
+
+
+
+
+
+***** IN Thu Sep  7 17:40:10 EDT 2023
+
+- Opened a terminal to request date and time for this log
+- Closed terminal
+
+PEER REVIEW #1
+
+- Downloaded first anonymous peer review > opened terminal > navigated to file location > untarred file with tar zxpf
+- Opened Anaconda > started JupyterLab > Uploaded their .py file to JupyterLab
+- Went through problems 1-5 and left comments
+- Closed their log
+- Closed terminal
+
+PROBLEM 1:
+
+- Opened a new terminal
+- In my terminal I navigated to my ast4762 Folder > Homework > then I made a directory for this homework by: mkdir hw3_abigailglover
+- Verified it was successfully created with 'ls'
+
+- I already had JupiterLab up on my laptop from peer review
+- I clicked the '+' to add a new launcher
+- Renamed that Notebook 'hw3_abigailglover'
+- Saved file into newly created folder
+
+- Commented name, assignment number, and date
+
+
+PROBLEM 2:
+- Wrote print statement for the problem
+- Downloaded module_template_with_docstring.py from Canvas
+- Closed terminal and will close log (due to moving locations)
+
+***** OUT Thu Sep  7 18:07:52 EDT 2023
+
+
+
+
+*****IN Thu Sep  7 18:34:27 EDT 2023
+
+PROBLEM 2 (continued)
+- Copied module_template_with_docstring.py using cp to homework file and renamed hw3_abigail_glover_support_functions per the instructions in homework_format_rules.pdf
+- Downloaded m42 file from Canvas
+- Sudo apt installed unzip to unzip the file from the terminal
+- Unzipped the file using unzip m42_40min_ir.fits
+
+***** OUT Thu Sep  7 19:16:19 EDT 2023
+
+
+
+
+***** IN Sat Sep  9 17:40:37 EDT 2023
+
+PEER REVIEW # 2
+- Opened Canvas and downloaded peer review file.
+- Used terminal to navigate to downloads and untar the file using tar zxpf
+- Opened the .py file in python3 in ubuntu
+- Reviewed and submitted review
+
+PEER REVIEW #3
+- Repeated above steps for final file
+
+HOMEWORK 3 (Continued)
+- Continuing on problem 2b
+- Created a new file and renamed it square, as per the hw3 file and the homework_format_rules
+- Read "Chapter 3: Functions" of Think Python 
+- Worked on function using if, else, and elif statements to determine type of values being entered
+- Code works for integers but ran into an issue with arrays
+- Downloaded Visual Studio Code to aid in debugging function
+- Corrected code and added specifications to formatting for arrays
+- HW file does not specify if we are required to make this code accept .txt files or just user input. I will try to follow-up on this
+- Opened my terminal, navigated to GitHub and made a directory titled hw3_abigailglover 
+- Copied the function file to my GitHub folder using cp
+- Committed to main, then pushed to origin
+
+Problem 2 c
+- Followed each section of the module example provided and added the following to my function: 
+        * Summary
+        * Extended details
+        * Parameters
+        * Returns
+        * Other Parameters
+        * Raises
+        * Notes
+        * References (and other sources)
+        * Examples (included all possible types of encounters)
+
+Problem 2 d
+- TEST CASE 1: Missing imports. Called to libraries that had not been imported
+- TEST CASE 2: Unexecuted code. Code to run doc tests did not run automatically.
+- TEST CASE 3: Unexecuted code. " "
+- TEST CASE 4: ( Added additional code to JupyterLab to test code and executed, but did not run doc string tests. Because of the amount of examples used in docstring I manually input each case to see if the output matched my expectation )
+
+Problem 2 e
+- Saved file and copied into GitHub folder
+- Took a screenshot of GitHub showing updates to code
+- Pushed to main and committed to origin
+
+Problem 2 f
+- Created array and print statement to check
+- Called to square function to square the array
+- Received a NameError due to not calling my function
+- Called function but naming seems incorrect. Instead of calling to my support functions module I had to call directly to square. This is due to misunderstanding the homework instructions and titling my function file square and saving a separate file under the necessary name.
+- To fix this I am going to attempt to delete the empty file and rename the function file
+- ModuleNotFoundError
+- Exported the file as an executable script and reran my main, this corrected the issue. Code runs as expected
+
+
+Problem 2 g
+- Wrote code and received an error that python cannot reshape an array from 0 to 25 (26 elements) into a 5x5 array
+- Changed array to include values from 1 to 24 and the code ran
+
+
+To Do:
+- Send e-mail to Dr. Karalidi in regard to question 2 g and the array size
+
+***** OUT Sat Sep  9 21:46:15 EDT 2023
+
+
+
+
+***** IN Sun Sep 10 21:05:26 EDT 2023
+
+PROBLEM 3
+- Began setting up function using the template provided
+- Wrote docstring providing information on the function
+- Wrote function
+
+Testing function
+- TEST CASE 1 Error regarding libraries. I assumed imported libraries from previous function would carry over. Re-importing functions for this specific function
+- TEST CASE 2 Code printed 5 empty plots with no error code
+- TEST CASE 3 In main, squareplot not defined error
+- TEST CASE 4 Cannot import function, overwrote existing .py file with new function
+- TEST CASE 5 Same error
+
+***** OUT Sun Sep 10 22:29:22 EDT 2023
+
+
+
+
+***** IN Tue Sep 12 11:12:37 EDT 2023
+- TEST CASE 6 Attempted splitting the functions into separate files and calling to them from the main, received a modulenotfound error
+
+Keep running into a "module not found" error. Python is trying to pull the function from somewhere else.
+Moving on to problem 4 for the time being.
+
+PROBLEM 4
+- pip installed astropy
+- wrote code for question 4
+- Referred back to week 3 module for code on .fits files and how to read the data
+- TEST CASE 1 Ran into an error because I forgot to close some parenthesis
+- TEST CASE 2 Code ran with no issues, so I adjusted spacing and added in the print statements answering the question in the homework file
+
+PROBLEM 5
+- Running into same issues with function
+- Restarted kernals, laptop, and Jupyter with no luck
+- Began messing with different ways to find path to function
+- imported and rephrased how I called the square function
+- THIS FIXED THE ERROR FOR Q1
+- New error for Q3 with saveplot
+- Q5 now runs, still with errors in Q3
+
+***** OUT Tue Sep 12 15:46:07 EDT 2023
+
+
+
+
+
+***** IN Wed Sep 13 08:40:37 EDT 2023
+
+NOTE: I was on for a couple of hours Tues Sep 12 after 22:00. My computer crashed and would not reboot. Log was lost for that time frame but work was saved due to pushing through to GitHub.
+
+Problem 3 is still not plotting correctly.
+- Traceback error
+- Input error
+- Successfully produces a graph in Jupyter with the incorrect axes, and no data
+- PDF of the graph is a blank image
+- Because it is close to the submission deadline, I am going to submit the code as is.
+
+Problem 6
+- On Jupyter, navigated to File > Save as > Executable Script
+- In my terminal, navigated to my hw folder, used cp -r to copy entire hw3 folder to GitHub
+- Went on GitHub and pushed to main
+- Went to history on GitHub and took a screenshot of the uploaded files
+
+- In my terminal, I changed directories and navigated to my hw3 folder. Using cp -r I copied the file to my Handin folder
+
+- When running the script in my terminal, ran into an error with problem 3 as expected
+- Edited code to skip problem 3 so that it would still run through the rest of the code
+
+- I will use cp to copy this log into my handin folder
+- then I will use tar zcf to tar the file
+- After verifying the file has been tarred, I will go to webcourses and upload the .tar file
+
+***** OUT Wed Sep 13 12:33:11 EDT 2023
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+***** IN Wed Sep 13 23:01:06 EDT 2023
+
+########## HOMEWORK 4 START ######################
+
+PROBLEM 1
+
+- Opened Ubuntu and changed directories to navigate to my ast folder
+      cd /mnt/c/Users/Abigail\ Glover/Desktop/ast4762/Homework
+- Using mk dir, I created my hw4 folder and labeled it hw4_abigailglover
+- Opened File Explorer to verify to folder was correctly made
+- Problem 1 is written a little strangely, so I am going to ask for clarification during office hours tomorrow.
+- Opened Anaconda > JupyterLab > new launcher
+- Typed name, homework assignment number, and date as comments in the file
+- Renamed the launcher 'hw4_abigailglover'
+- Saved the file under the new hw4 folder (for now)
+
+
+PROBLEM 2 
+
+PART A
+- Problem 2 specifies finding a function to make draws. From the NumPy website I found np.random.normal which is made for normal Gausssian distribution.
+- Read the following article discussing how to use the function: https://www.sharpsightlabs.com/blog/numpy-random-normal/
+- inserted the function into my code and specified the loc(mu) = 13, scale (standard deviation) = 55, and Size (N) = 10000, as specified in the problem
+
+- TEST CASE 1: Saved the code and added a print statement to see if the function would return any errors. Code successfully executed. Removed print statement, as it is not required in the assignment.
+
+PART B
+- Used plt.hist and specified the dataset (sample), the bins (as arange, specifying number of elements and width), set density = True so that area under the curve = 1, and set the color to firebrick.
+- Labeled x axis, y axis, title, and set a legend
+- Used show.plt() to test
+
+- TEST CASE 1: Error. Matplotlib has no hist attribute
+- After searching I found it was due to my import. I imported matplotlib and needed matplotlib.pyplot to access the histogram
+
+- TEST CASE 2: Code completed and plot was generated but I received an error code stating show.plt was not valid.
+- Realized I had the function backward, corrected to plt.show() and code ran without error
+
+- Going back in to fine tune sizing and the legend
+- Found a wonderful resource on Stack Flow for specifying details of the legend: https://stackoverflow.com/questions/44620013/title-for-matplotlib-legend
+- added plt.savefig to save as hw4_abigailglover_problem2_graph1.png
+- Code is running with no errors at this time
+
+PART C
+- Calculated the center of each bin for new plot
+- Defined bin edges
+- Plotted both histogram and calculated Gaussian
+- Labeled axes and legend, save to png using format from previous question
+
+- TEST CASE 1: Code runs with no errors but is only showing the calculated Gaussian, not the histogram
+- Attempted removing the calculation of the Histogram with no luck
+- Restarted kernals and reran all code
+- Got an error! Name convention. Corrected this
+
+- TEST CASE 2: Code is running with no errors again, but still not plotting the histogram.
+I am going to follow up with Kenney tomorrow regarding this since it is similar to an issue I was having in hw3
+
+
+TO DO:
+- Follow up with Kenney to clarify where files are being saved. HW file has a new folder made but files are saved in a different location (hw3 folder)
+- Problem 2 part c, not plotting the histogram only Gaussian curve
+
+***** OUT Thu Sep 14 01:06:43 EDT 2023
+
+
+
+
+
+
+***** IN Thu Sep 14 16:05:01 EDT 2023
+
+- Joined Kenney's office hours
+- Save in hw4 folder, this was a typo in the assignment
+
+- Problem 2 part a double check arguments - RESOLVED
+- Scale Gaussian or histogram - RESOLVED
+
+- Using a base code from GeeksforGeeks, I scaled my Gaussian so that it would fit the histogram
+- Added a heavier lineweight and chose a different color to differentiate the Gaussian
+
+***** OUT Thu Sep 14 18:12:47 EDT 2023
+
+
+
+
+
+***** IN Sat Sep 16 15:03:40 EDT 2023
+
+PROBLEM 3
+- Created a function file and named according to hw naming conventions
+- Added docstring from previous assignment and changed to relevant information
+- Typed function and labeled it sample_draws
+- Exported as an executable script to try running in main
+- Typed code in the main file and called function
+
+TEST CASE 1
+- Naming error: after reviewing my code I realized I accidentally misspelled one of my parameters. 
+
+TEST CASE 2
+- Incorrect import: When importing numpy I mistyped np as pn
+- I corrected this in my function and re-exported the file as an executable script
+
+TEST CASE 3
+- After restarting kernals, and rerunning code, I received an error on a previous problem. To fix this, I redefined variable within my Gaussian and ran again. This corrected the issue. For this problem, Jupyter was not registering my import of numpy. I saved my files, restarted the program, and reset kernal. This fixed the import.
+
+TEST CASE 4
+- Value error: arrays were too large for available system memory. I amended my function code so that instead it breaks to arrays up and aggregates them at the end.
+- Resaved files, exported the function.
+
+TEST CASE 5:
+- int error: One of my variables was not iterable. Updated to an array from an integer
+
+TEST CASE 6:
+- Problem ran with no errors! Data file saved. I need to go through the data file and make sure that it ran correctly. This will be my next step!
+
+***** OUT Sat Sep 16 15:57:58 EDT 2023
+
+
+
+
+
+***** IN Mon Sep 18 18:42:40 EDT 2023
+
+- Reviewing data output from Saturday
+- Adjusted code so that it would iterate 10 times for each sample draw (I originally wrote it for ten total)
+- Added log-log
+
+TEST CASE 1:
+- Plotted an empty graph
+- added additional stipulations to prior code
+- Specifically, empty arrays for the data to store in and then be pulled from for the log
+
+TEST CASE 2:
+- Successfully plotted!
+
+PROBLEM 4
+- Read section from Bevingtion (pg 28) and attempted bonus credit for assignment
+- Worked on problem 4 on my iPad so I could easily export as a PDF
+- re-read naming conventions but did not see if/where it specified naming conventions for a pdf file so I named it hw4_abigailglover_problem4_data
+
+PROBLEM 5
+- Went back and double-checked comments and formatting
+- Saved both my main file and support functions as executable scripts (.py)
+- Opened my terminal and navigated to my homework file
+- Copied my hw4 file to my GitHub using cp -r to copy the entire folder to my github directory
+- Went to my github folder to ensure that it copied over correctly
+- Almost forgot to upload my pdf to the folder! Saved in both folders
+- Opened my GitHib Desktop app and pushed all updates to main and origin
+
+Answering the question from the assignment
+- I copied my folder and pushed on GitHub in order to back up all of my files from the most recent save point. This is important because if my code were to ever crash or if I were to lose it on Jupyter, Github would have thse files from that save point. This is especially important for long code so that you don't lose all of your work!
+
+- Took a screenshot of my GitHub history and saved under hw4_abigailglover_problem5_graph1
+- Using my terminal I navigated to my homework folder by using /mnt/c/Users/Abigail\ Glover/Desktop/ast4762/Homework/
+- Then, I used cp -r to copy my hw4_abigailglover folder to the my handin folder by using /mnt/c/Users/Abigail\ Glover/Desktop/ast4762/Handin
+- I then navigated through file explorer to verify it successfully copied over
+- I then opened my terminal and ran the .py file
+
+TEST CASE 1
+- Error for finding Scipy
+- Using 'pip install scipy' to correct the issue
+
+TEST CASE 2
+- Code ran completely with no errors!
+
+- Deleted Jupyter source files and generated files from test run
+- Using cp 0-ast4762-abigailglover /mnt/c/Users/Abigail\ Glover/Desktop/ast4762/Handin/hw4_abigailglover I will copy this log into my hw4 folder
+- To tar my folder I am going to use tar zcf hw4_abigailglover.tar.gz in my handin folder
+- After successfully tarring, I will submit this file to webcourses
+
+**** OUT Mon Sep 18 21:26:43 EDT 2023
+
+
+
+
+
+
+#############################################################
+
+
+
+
+
+***** IN Tue Sep 26 17:28:09 EDT 2023
+
+#################### HOMEWORK 5 START #######################
+
+Problem 1
+- Opened and started current log for homework 5
+- Opened Ubuntu to get current date and time by using > date
+
+- Homework problem states: Use your terminal to make a new folder hw5_yourname under your
+ast4762/ homework folder
+- In Ubuntu terminal I navigated to my homework folder by using:
+                 cd /mnt/c/Users/Abigail\ Glover/Desktop/ast4762/Homework/
+- Once in the correct folder I used "mkdir" to make a new folder and labeled it "hw5_abigailglover"
+- I then used "ls" to list all current folders and navigated to the folder in my file explorer to verify that it was successfully created 
+
+
+- Homework problem states: For this homework your main homework file is a Python file named hw5_<username>.py (or a hw5_<username>.ipynb but remember to save it as a .py before submission). Save it in your homework folder.
+- Anaconda and Jupyter Lab were both already running on my computer, so on Jupyter Lab I navigated to my new hw5 folder on the left-hand menu, and created a new Python kernal
+- I added my comments (Name, Date, Assignment #) to the top of the file 
+- Renamed the file "hw5_abigailglover"
+- Saved the filed and verified that it correctly saved the the hw5 folder
+- Will need to save it as a .py before submission
+
+
+- Homework problem states: Remember to commit your files and push to GitHub. Start the file with the usual header
+- In my Ubuntu terminal I copied the current file to my GitHub so that I can make an initial push and update as I go
+- I used
+      cp -r hw5_abigailglover/ /mnt/c/Users/Abigail\ Glover/Documents/GitHub/ast4762/homework/
+to do this, and verified that it had been copied over
+- Opened GitHub on my desktop, and pushed to GitHub with the label "HW5 Initial Push to GitHub for Assignment"
+- Usual header was added in previous steps and is present in push to GitHub
+
+
+
+Problem 2
+Part a.)
+- Homework states: Create an array with 400 elements, that contains sample draws from
+a Poisson and the uniform distribution as follows: the first 396 elements of the
+array should contain draws from a Poisson distribution for 10,000 photons, and
+the rest 4 elements draws from the uniform distribution between 0 and 106 (Tip:
+don’t reinvent the wheel! There are functions that do this already for you). 
+- Began by importing my libraries
+- Used "np.random.poisson" and specified the number of photons (lamda) as 10,000
+- followed up with generating the 4 uniform samples by using "np.random.uniform"
+- Combined the two arrays to create a single array of 400 by using np.concatinate (which I learned about from the following site: https://numpy.org/doc/stable/reference/generated/numpy.concatenate.html ). This joins a sequence of arrays along an existing axis.
+
+- Homework states: This sample represents data from a CCD with just 1% bad pixels. Print the mean and median of the sample and put the result in your homework file in comments.
+- A little confused by this, so I printed the mean and median and also included the values as print statements only since each time the code is run new random samples will be drawn
+
+Which is closer to N?
+- To calculate whether the mean or median is closer to N, I started by specifying the length of the array and calculating the standard deviation. 
+- I then calculated the expected mean and expected median so that I could compared them with the actual values by subtracting the expected from actual
+- Used an if else statement to print the result
+- I found the following source that says a way to check this is by plotting the histogram:
+https://www.statology.org/normality-test-python/ but when I do that, I do not get a plot that resembles a Normal distribution
+- Going to look into this some more
+- Increased the number of bins and was able to get something more closely resembling a histogram
+- Attempted scaling, but because of the uniform distribution lying between 0 and 106 the data is very spread out
+- I am going to double-check to make sure I set up my samples correctly
+- lam = rate parameter. I initially interpreted the 10,000 photons as this which explains why my data are on two ends of the histogram. Still not sure if this is exactly what is being asked. Will follow up with Kenny or Dr. Karalidi during office hours to verify, but for now I will move on
+
+Part b.)
+-Homework states: Calculate the standard deviation, σ, for the sample above. Create a subsample including only points within 5σ of the median (remember your boolean array slicing!). Print the new sample’s mean, median, and standard deviation. What has happened?
+- Luckily I already calculated that standard deviation for the previous part, so I just needed to call it to start this problem
+- To create the subsample I started by defining the upper and lower bounds as the sample's original median +/- 5*sigma (std dev) 
+- Then I used a boolean mask to compare and select elements within before actually creating the subsample
+- After creating the subsample, I calculated the mean, median, and standard deviation using the same method as the previous part and printed the answers
+- If my values are correct, the mean is now much closer to the median value, and my standard deviation decreased by nearly 100x
+
+Part c.) 
+- Began repeating this process, but I'm going to hop off for tonight
+- Committed to GitHub to save all progress with title "Hw5 Problems 1 and 2 a-b"
+
+TO DO:
+- Finish problem 2
+- Double-check understanding of what the problem is asking
+
+***** OUT Tue Sep 26 21:18:33 EDT 2023
+
+
+
+
+
+***** IN Sat Sep 30 16:14:06 EDT 2023
+
+NOTE: Problem 2 was discussed in class which helped with my understanding of what the question was asking
+
+PROBLEM 2 (continued)
+- I began by opening and starting this log
+- Made some slight modifications to my written answers for parts a-b and picked up where I left off in part c. Reviewed my code and made sure it made sense. Then analyzed the values produced and looked up some reasons why I was getting the values I was getting (Specifically, why the standard deviation reduced so much, and why my mean, median and standard deviation remained the same between the subsample and sub-subsample).
+- Answered the questions in part c as a print statement in my code reflecting what I found.
+- I added four calculations into my part c to calculate the differences between the mean and medians. This made it easier to add to print statements since the values will change based on the random generators I used earlier on.
+- Had to add another quick calculation for difference in expected standard deviation and final standard deviation.
+- Worked on organizing my code/print statements and making sure everything is neat.
+- Code is running fine and I'm happy with how my print statements are organized so far.
+
+PROBLEM 3
+- Because we are creating a routine (I am assuming this is a function we can call to). So I am creating a new python terminal and have renamed it "hw5_abigailglover_support_functions"
+- Started by defining my function in the new notebook and creating my docstring (Had to look at previous functions because the docstrings include a lot of information)
+
+- Had guests arrive so I will have to cut this short for now
+- I am going to copy over and commit to GitHub to make sure my updates are saved.
+- When I come back I will finish my docstring and work on the function.
+
+- Committed to GitHub and labeled this update as 'Hw 5 Updates'
+
+***** OUT Sat Sep 30 18:08:42 EDT 2023
+
+
+
+
+***** IN Sun Oct  1 10:34:43 EDT 2023
+
+Good morning! 
+
+PROBLEM 3 (continued)
+- Picking up where I left off and finishing the docstring for my function
+- Doc string is now complete, so I moved on to defining my function
+- Used an if statement to consider all points in the original data set as good so that I can calculate the mean, standard deviation, and absolute deviation to determine which pixels are bad
+- HW says to use this with problem 2 parts b and c so that is how I am going to test it
+-- Making sure to save everything before running
+- Began by importing my function file, but I am getting an error saying that the module is not found
+- Vaguely recall a previous homework giving a similar issue. I am going to try and export the function file as an executable script and try again
+- Update: this solved the error I was having!
+- Called to function ( I always end up having to call to it in a funky way, but it works ), but when I ran the code to see if it would run, got an error concerning numpy
+- Went back to my support function and imported numpy to the file, exported and replaced the previous script, restarted my kernals, and ran all code from the beginning. This fixed the error!
+- Tested function and code ran, but value I got back was wrong, so I am going to take a look at my function again
+- Did some digging and it turns out it was not my function but the way that I was calculating the mean. I had used np.mean to calculate the mean of the resulting Boolean, NOT the resulting array. I fixed this by relabeling what I originally had as cleaned_data to cleaned_mask and created the cleaned_data by applying the mask to the result_array from problem 2a. When I recalculated the mean this gave the same value as the previous step!
+- I used an if else statement for comparing the value with the previous mean so that in the event there is ever an instance where the mean is not the same, it is noted and the code can be corrected. However, after running the code, everything is going smoothly and the calculated mean is the same.
+- Saved all of my files for good measure before moving on to next problem
+
+PROBLEM 4
+PART A
+- Began by printing my problem number as always
+- Error propagation formula from week 3 lecture
+- I started by stating the problem and calculating the partial derivatives. Based on how the homework problem is stated, I am assuming I am simply printing the resulting statement, not plugging in any numerical values
+
+PART B
+- Took a lil break with part A and moved on to part B to work on the smaller problems and get some practice in for the quiz. I originally wrote each one out defining the variables x, dx, y, and dy and printing the solution, but for the sake of the assignment and the memory needed for my code I went back and edited it all so that it was neater.
+
+
+- Back to part A, I defined my sigma values and created a final equation and its print statement, but it's a little ugly. I tried a couple of different ways to change how it prints, but it's been coming out the same pretty much every time.
+- Going to leave it how it is for now
+
+
+PROBLEM 5
+PART a.)
+- Created a sample of 100 draws from a uniform distribution using np.random.uniform and specified end conditions and number of draws
+- Calculated f(x)
+- Created a second set of samples from a Gaussian distribution using np.random.normal
+- Added the values together for a synthetic dataset
+- Created my plot using plt.scatter for the synthetic data while keeping the function as a linear line
+- I used Halloween colors since it's October now, and the test plot turned out pretty well
+- The homework does not specify if we need to save this plot or not
+- I am going to assume we do
+
+PART b.)
+- Went to week 4 in lectures_demos and redownloaded linfit directly into my hw5 folder to use
+- Called to the function, I don't think I need to do much more than that for now
+- Answering the questions being asked
+- I found this great resource that discusses uncertainty values and what specific values can mean in terms of the overall data:
+
+https://qualifications.pearson.com/content/dam/pdf/A%20Level/Physics/2015/Specification%20and%20sample%20assessments/Appendix%2010%20Updated.pdf
+
+- for the final question, I wrote a short snip of code to check whether or not my values were within 3 sigma. Because this isn't requested, I commented it out but left it in. This way it is there to use if needed in the future. 
+- Went back and reformatted questions in print statements as it was getting a little difficult to see where questions vs answers were
+
+PART c.) 
+- Read about the chi-squared test and how it may help with this problem:
+
+https://www.simplilearn.com/tutorials/statistics-tutorial/chi-square-test
+https://analyticsindiamag.com/a-beginners-guide-to-chi-square-test-in-python-from-scratch/
+
+- typed the code to find the chi-squared value and the probability, but I am still a bit confused on what the answer means. 28% seems low but some sources I am finding say that is high. May have to follow up on this.
+
+- Plotted with the same colors as earlier and saved accordingly
+
+PART d.)
+- Copied and pasted everything from the previous steps for part d and made some slight adjustments
+- When running the code I get an error for the number of values to unpack being too many with the quadratic
+- Because this will cause an error in my code when I convert the file to a .py, I have used a docstring to eliminate the section of code from being run
+- This way, my file will skip to my answer to the homework question
+
+
+- Not sure if I am going to do question 6 or not since 4A was one I wasn't sure about. I might consider it since it is extra credit but for now, I'll be hopping off for the day.
+- Saved all of my files
+- Pushed to GitHub with label "Hw 5 Problems 3 - 5" to make sure everything is backed up
+
+***** OUT Sun Oct  1 16:36:42 EDT 2023
+
+
+
+
+
+***** IN Mon Oct  2 18:20:34 EDT 2023
+
+- Unfortunately, I don't have the time I would like to do the bonus question due to another assignment that I need to work on and wanting to have the time to study
+- I spoke to Kenny and he said he will always look at the most recent upload, so if I change my mind before 9 am I will do that
+
+PROBLEM 7
+- Opened Anaconda and JupyterLab
+- Navigated to HW 5 file and went to "File" > "Save as Executable Script" and saved in my hw5 folder as a .py
+- Deleted the saved .png from running on JupyterLab and copied over the file to my GitHub using  cp -r hw5_abigailglover /mnt/c/Users/Abigail\ Glover/Documents/GitHub/ast4762/homework/
+- 
+
+
+
+
+
+
