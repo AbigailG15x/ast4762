@@ -260,9 +260,6 @@ plt.ylabel('f(x) + Measurement Errors')
 plt.title('Synthetic Dataset with Measurement Errors')
 plt.legend()
 
-# Save plot
-plt.savefig('hw5_abigailglover_problem5_graph1.png')
-
 # Show plot
 plt.show()
 
@@ -343,7 +340,7 @@ plt.title("Linear Fit of Data")
 plt.legend()
 
 # Save the plot as a PNG file
-plt.savefig("hw5_abigailglover_problem5_graph2.png")
+plt.savefig("hw5_abigailglover_problem5_graph1.png")
 
 # Show the plot (optional)
 plt.show()
