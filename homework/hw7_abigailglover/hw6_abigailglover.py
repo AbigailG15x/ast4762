@@ -8,6 +8,7 @@
 # October 9, 2023
 # HW 6
 
+# UPDATED 31 Oct 2023 by Abigail Glover
 
 # In[76]:
 
@@ -441,7 +442,6 @@ rubric = """
 print(rubric)
 
 
-# In[ ]:
 
 
 

@@ -13,10 +13,12 @@
 # Updated 12 Oct 2016 by Joseph Harrington
 # Updated 15 Oct 2019 by Joseph Harrington
 # Updated Oct 2023 by TK
+# Updated 31 Oct 2023 by Abigail Glover
 
 import os
 import numpy as np
-import rdpharo as rp
+# Changed to rdpharo_win for windows machine
+import rdpharo_win as rp # FIXED 31 Oct 2023
 import time
 import os
 import pwd
@@ -25,7 +27,8 @@ import astropy.io.fits as fits
 
 
 #set data dir to loop over files instead of hardcoding
-datadir  = '/Users/theodora_karalidi/Downloads/hw6_data/'
+# Updated data directory to a different data location relative to this code
+datadir = "hw6_data/" # FIXED 31 Oct 2023
 fext     = '.fits'
 
 
