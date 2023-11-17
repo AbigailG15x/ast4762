@@ -14,7 +14,7 @@
 ## Call all importds at top of file
 import matplotlib.pyplot as plt
 import numpy as np
-from hw6_sol import *                    ## Import for Problem 2
+from hw6_abigailglover import *                    ## Import for Problem 2
 import medcombine as mc                  ## Import for Problems 3 and 5
 
 
@@ -61,7 +61,8 @@ print("")
 normregion = ((225, 225), (-225, -225)) # ((y1, x1), (y2, x2))
 
 # do the normalized median combination
-normsky, normfact = mc.normmedcomb(objdata, normregion)
+#print(obj_data.shape)
+normsky, normfact = mc.normmedcomb(objects_array, normregion)
 
 # write results, using 32-bit floats
 fits.writeto('sky_13s_mednorm'+fext, np.float32(normsky), objhead,
@@ -85,16 +86,16 @@ print('\nSee routine skycormednorm() in medcombine.py. Import at top of main' \
 
 # Apply skycormednorm in a loop to all the object data in place
 for k in np.arange(nobj):
-    objdata[k] = mc.skycormednorm(objdata[k], normsky, normregion)
+    objects_array[k] = mc.skycormednorm(objects_array[k], normsky, normregion)
 
 # Save the last file.
 # Make the data float32, not float64, to save space.
-savedata = np.float32(objdata[-1])  # will use twice, so compute only once
+savedata = np.float32(objects_array[-1])  # will use twice, so compute only once
 
 fits.writeto(objfile[-1]+'_nosky'+fext, savedata, objhead, overwrite=True,
              output_verify='silentfix') # due to bug in astropy.io.fits
 
-print("\nThe value of pixel [217, 184] is "+savedata[217, 184])
+print("\nThe value of pixel [217, 184] is:", savedata[217, 184])
 
 
 # === Problem 6 ===

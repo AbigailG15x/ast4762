@@ -97,6 +97,7 @@ print("darkdata size: " + str( len(darkdata) ) )
 
 for k in range(nobj):
   infile              = datadir + objfile[k] + fext
+  print(infile)
   objhead, objdata[k] = rp.rdpharo(infile)  # NOTE: Implicit type conv.
   # The raw data are 32-bit integers but objdata is 64-bit floats.
   # Note that in the line above, [k] is the same as [k,:,:].  Cool, huh?
@@ -108,6 +109,7 @@ for k in range(nobj):
   # requests.
 
 # dark data
+
 for k in range(ndark):
   infile                = datadir + darkfile[k] + fext
   darkhead, darkdata[k] = rp.rdpharo(infile)  # NOTE: Implicit type conv.

@@ -12,8 +12,8 @@
 # Updated  2018-10-30 by jh, print prob numbers
 
 
-from hw7_sol import *
-import disk as D
+from hw7_abigailglover import *
+import hw8_abigailglover_support_functions
 import gaussian as gs
 
 import pyds9
@@ -25,20 +25,27 @@ ds9Win.set_np2arr(objdata[0])
 print("=== Problem 2 ===")
 
 # hard-coded values
-lamponfile = np.array([
-	'k_lampon_1',
-	'k_lampon_2',
-	'k_lampon_3',
-	'k_lampon_4',
-	'k_lampon_5'
-])
-lampofffile = np.array([
-	'k_lampoff_1',
-	'k_lampoff_2',
-	'k_lampoff_3',
-	'k_lampoff_4',
-	'k_lampoff_5'
-])
+# hard-coded values
+folder_path = "hw6_data"
+
+# Define lampon and lampoff files
+lampon_prefix = "k_lampon_"
+lampoff_prefix = "k_lampoff_"
+
+# List all files in the folder
+all_files = os.listdir(folder_path)
+
+# Filter lampon and lampoff files
+lampon_files = [file for file in all_files if file.startswith(lampon_prefix)]
+lampoff_files = [file for file in all_files if file.startswith(lampoff_prefix)]
+
+# Sort the files
+lampon_files.sort()
+lampoff_files.sort()
+
+# Convert lists to NumPy arrays
+lamponfile = np.array(lampon_files)
+lampofffile = np.array(lampoff_files)
 
 # query data for sizes
 nlampon  = lamponfile.size
@@ -113,7 +120,7 @@ fits.writeto(objfile[-1]+'_flat'+fext, np.float32(objdata[-1]), objhead,
 print("=== Problem 3 ===")
 
 # see disk.py
-disktest = D.disk(6.2, (12.3, 14.5), (25, 30))
+disktest = hw8_abigailglover_support_functions.disk(6.2, (12.3, 14.5), (25, 30))
 fits.writeto('disktest.fits', np.uint8(disktest), overwrite=True,
              output_verify='silentfix') # due to bug in astropy.io.fits
 
@@ -132,19 +139,19 @@ print("Problem 4")
 # Stellar photometry:
 photometry = np.array(
   [
-  #  yguess, xguess,     width,     cy,     cx,     star,     sky
+#  yguess, xguess,     width,     cy,     cx,     star,     sky
   # star 0
-   [[   698,    512,    np.nan, np.nan, np.nan,   np.nan,  np.nan],  # frame 0
-    [   464,    517,    np.nan, np.nan, np.nan,   np.nan,  np.nan],  # frame 1
-    [   228,    522,    np.nan, np.nan, np.nan,   np.nan,  np.nan]], # frame 2
+   [[   698,    512,    0.959,    698.61,   512.39,   np.nan,  np.nan],  # frame 0
+    [   464,    517,    0.931,    464.37,   517.42,   np.nan,  np.nan],  # frame 1
+    [   228,    522,    1.070,    228.43,   521.93,   np.nan,  np.nan]], # frame 2
   # star 1
-   [[   668,    520,    np.nan, np.nan, np.nan,   np.nan,  np.nan],  # frame 0
-    [np.nan, np.nan,    np.nan, np.nan, np.nan,   np.nan,  np.nan],  # frame 1
-    [np.nan, np.nan,    np.nan, np.nan, np.nan,   np.nan,  np.nan]], # frame 2
+   [[   668,    520,    1.026,    667.88,   520.23,   np.nan,  np.nan],  # frame 0
+    [   434,    525,    0.961,    433.58,   525.30,   np.nan,  np.nan],  # frame 1
+    [   198,    530,    1.144,    197.64,   529.79,   np.nan,  np.nan]], # frame 2
   # star 2
-   [[   568,    283,    np.nan, np.nan, np.nan,   np.nan,  np.nan],  # frame 0
-    [np.nan, np.nan,    np.nan, np.nan, np.nan,   np.nan,  np.nan],  # frame 1
-    [np.nan, np.nan,    np.nan, np.nan, np.nan,   np.nan,  np.nan]]  # frame 2
+   [[   568,    283,    1.063,    568.26,   283.30,   np.nan,  np.nan],  # frame 0
+    [   334,    288,    0.955,    333.96,   288.36,   np.nan,  np.nan],  # frame 1
+    [    98,    293,    1.071,    98.07,    292.90,   np.nan,  np.nan]]  # frame 2
   ], dtype=float)
 
 # These are symbolic names to use as indices in the photometry array.

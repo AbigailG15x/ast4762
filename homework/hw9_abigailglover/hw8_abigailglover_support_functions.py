@@ -38,9 +38,9 @@ def disk(radius, center, shape):
     return mask
 
 # Define parameters
-radius = 6.2
-center = (12.3, 14.5)
-image_shape = (25, 30)
+radius = 6.0
+center = (10.5, 10.5)
+image_shape = (21, 21)
 
 # Generate the disk mask
 mask = disk(radius, center, image_shape)

@@ -140,20 +140,25 @@ print('\nPart b.)\n')
 objfile = []
 darkfile = []
 
+
 # List all files in the data directory
 file_list = os.listdir(datadir)
 
 # Iterate through the file names and categorize them
 for file_name in file_list:
     
-    # Check if the file starts with "stars_13s_"
-    if file_name.startswith("stars_13s_"):
+    if file_name.startswith("stars_13s_") and not "nosky" in file_name:
         
         # Remove the ".fits" extension and add to the objects list
         objfile.append(file_name.replace(fext, ""))
-        
+
+
+    ## FIXED 2 Nov 2023
+    ## Added a conditional statement so that it does not read in the 
+    ## med file from this assignment
+    
     # Check if the file starts with "dark_13s_"
-    elif file_name.startswith("dark_13s_"):
+    elif file_name.startswith("dark_13s_") and not "med" in file_name:
         
         # Remove the ".fits" extension and add to the darks list
         darkfile.append(file_name.replace(fext, ""))
