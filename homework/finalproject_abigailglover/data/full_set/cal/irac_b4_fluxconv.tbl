@@ -1,0 +1,8 @@
+\char Comment Calibration data file for dntoflux module.
+\char INSTRUME = 'IRAC'
+\int  CHNLNUM  = 4
+\char fluxconv = 'Conversion factor in MJy/sr per DN/s'
+\char fluxconvunc = 'Uncertainty in fluxconv' 
+|fluxconv  |fluxconvunc  | 
+|float     |float        |
+ 0.2021     0.0041

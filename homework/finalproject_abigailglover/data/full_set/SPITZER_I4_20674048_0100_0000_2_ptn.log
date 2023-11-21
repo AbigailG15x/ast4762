@@ -1,0 +1,407 @@
+Subroutine libipactblread redefined at /sos/sw/S14.4.0/FORTE/downlink/plexec/wrappers/utils/w_mips24_lib.pl line 2964.
+============================================================
+Wrapper-script w_pointinghistory.pl, Version 9.92
+
+Setting paths...
+
+Making SODB connection with role pipelineswrole...
+Connected to SODB.
+
+Input BCD plScriptId = 17
+Input BCD information in SODB:
+   fileName = /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/17/01/1/dntoflux.fits
+   fileName path = /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/17/01/1
+   BCD dpId   = 140691097
+   status   = 1
+
+Copied /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/17/01/1/dntoflux.fits to bcd.fits
+From FITS header of bcd.fits: 
+   DCEID = 66444020
+   DPID = 140691097
+   CAMPAIGN = IRAC009100
+   PAO_NUM = 2082
+   INSTRUMENT = IRAC
+   AORKEY = 20674048
+   CHNLNUM = 4
+   EXPID = 100
+   DCENUM = 0
+   FOS VERSION = 1
+   SOS VERSION = 1
+   Missing image data = F
+   Missing ancillary data = F
+
+Copying property files from local CDF cache...
+
+Reading TFS log file...
+
+TFS log file: key, fileId = Keyword_Include_List.dat, 11092005
+TFS log file: key, fileId = apertureNames.tbl, 11092005
+TFS log file: key, fileId = avg_header.tpl, 11092005
+TFS log file: key, fileId = bpru.tbl, 120503
+TFS log file: key, fileId = cal_header.tpl, 11092005
+TFS log file: key, fileId = cal_mask.tpl, 11092005
+TFS log file: key, fileId = calkeywords.dat, 11092005
+TFS log file: key, fileId = caltrans.nl, 11092005
+TFS log file: key, fileId = copytosandbox.nl, 11092005
+TFS log file: key, fileId = fpg_fa.tpl, 05082006
+TFS log file: key, fileId = fpg_sa.tpl, 05082006
+TFS log file: key, fileId = hdrupd8_cubify.dat, 11092005
+TFS log file: key, fileId = hdrupd8_planify.dat, 11092005
+TFS log file: key, fileId = instrument_FOV.tbl, 03082004
+TFS log file: key, fileId = latimflag.tbl, 11092005
+TFS log file: key, fileId = med_header.tpl, 11092005
+TFS log file: key, fileId = pn101.nl, 11092005
+TFS log file: key, fileId = pn103.nl, 11092005
+TFS log file: key, fileId = pn107.nl, 12072005
+TFS log file: key, fileId = pn120.nl, 11092005
+TFS log file: key, fileId = pn122.nl, 01182006
+TFS log file: key, fileId = pn123.nl, 11092005
+TFS log file: key, fileId = pn141.nl, 11092005
+TFS log file: key, fileId = pn143.nl, 11092005
+TFS log file: key, fileId = pn144.nl, 11092005
+TFS log file: key, fileId = qa_bcd_keywords.dat, 11092005
+TFS log file: key, fileId = qa_cal_keywords.dat, 11092005
+TFS log file: key, fileId = qa_dce_keywords.dat, 11092005
+TFS log file: key, fileId = sanity_datatype1.tbl, 11092005
+TFS log file: key, fileId = sanity_datatype2.tbl, 11092005
+TFS log file: key, fileId = w_bqd_bandmerge.nl, 05082006
+TFS log file: key, fileId = w_bqd_files_to_copy_to_sandbox.nl, 05082006
+TFS log file: key, fileId = w_bqd_mopex.nl, 05082006
+TFS log file: key, fileId = w_bqd_mopex_medium.nl, 05082006
+TFS log file: key, fileId = w_bqd_mopex_short.nl, 05082006
+TFS log file: key, fileId = w_bqd_mosaic_int.nl, 2
+TFS log file: key, fileId = w_bqd_multibandrefine.nl, 120503
+TFS log file: key, fileId = w_bqd_pointrefine.nl, 11092005
+TFS log file: key, fileId = w_bqd_singleframePSE.nl, 10202005
+TFS log file: key, fileId = w_fiducial_frame.nl, 11092005
+TFS log file: key, fileId = w_pointinghistory.nl, 11092005
+TFS log file: key, fileId = readnoise.tbl, 11092005
+TFS log file: key, fileId = w_bqd_overlap.nl, 11092005
+TFS log file: key, fileId = bcd2mosaic_keywords2copy.txt, 11092005
+TFS log file: key, fileId = fpg_mosaic.tbl, 11092005
+TFS log file: key, fileId = pointing_transfer.nl, 11092005
+Copied /scr1/S14.4.0/cdf/7/apertureNames.tbl to ./cdf/apertureNames.tbl
+Copied /scr1/S14.4.0/cdf/7/caltrans.nl to ./cdf/caltrans.nl
+Copied /scr1/S14.4.0/cdf/7/fpg_sa.tpl to ./cdf/fpg_sa.tpl
+Copied /scr1/S14.4.0/cdf/7/pointing_transfer.nl to ./cdf/pointing_transfer.nl
+Copied /scr1/S14.4.0/cdf/7/w_pointinghistory.nl to ./cdf/w_pointinghistory.nl
+Creating comment-header text file for hdrupd8...
+
+Reading data from instrument-FOV file (./cdf/apertureNames.tbl)...
+
+Reading data from ./cdf/w_pointinghistory.nl...
+
+Reading data from ./cdf/w_pointinghistory.nl...
+
+Reading data from ./cdf/w_pointinghistory.nl...
+
+Copied /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/17/01/1/dmask.fits to ./dmask.fits
+Copied /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/17/01/1/tranhead.fits to ./tranhead.fits
+Copied /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/17/01/1/iracebwc.fits to ./iracebwc.fits
+Copied /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/17/01/1/sig_dntoflux.fits to ./sig_dntoflux.fits
+Copied /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/17/01/1/sosexec/out.pline to ./sosexec/initialBCD_out.pline
+
+Executables pathname = /sos/sw/S14.4.0/FORTE/downlink/bin
+Ancillary-data pathname = /sos/sw/S14.4.0/FORTE/downlink/include
+Calibration data pathname = ./cal
+Namelist data pathname = ./cdf
+QA output pathname = ./qa
+WRAPPER_UTILS env. var. = /sos/sw/S14.4.0/FORTE/downlink/plexec/wrappers/utils
+Super-Boresight control namelist = ./cdf/pointing_transfer.nl
+Pointing-Transfer namelist = ./cdf/w_pointinghistory.nl
+Pointing-Transfer namelist blockname = IRAC_IN
+SODB role = pipelineswrole
+SODB name = sodb
+SOS configuation directory = /sos/logs/S14.4.0
+Pointing-server info file = ptnserver.info
+Pointing-server is not running.
+Data-product filename = /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/17/01/1/dntoflux.fits
+Instrument = IRAC 
+Channel = 4 
+Readout mode = SUB
+Exposure-type = sci
+Aperture name = IRAC_Center_of_8.0umSub-Array
+Instrument FOV file = instrument_FOV.tbl
+Pipe number = 111
+Start SCLK = 846547017.322
+End SCLK = 846547018.832
+CalTrans-Control table version env. var. = calTransControls
+CalTrans software mode = 2
+CalTrans cache path = /scr1/S14.4.0/dlcaldata/irac
+CalTrans namelist filename = ./cdf/caltrans.nl
+CalTrans namelist blockname = CALTRANSptgIN
+CalId = 9
+USEPTGSERV env. var. = 0
+
+Arguments for child program /sos/sw/S14.4.0/FORTE/downlink/bin/caltrans: -m 2 -a 9 -b /scr1/S14.4.0/dlcaldata/irac -s bcd.fits -o ./cal -u SUB -t cdelt12_distort;fovtable -n ./cdf/caltrans.nl -e CALTRANSptgIN -g cdelt12_distort.tbl;instrument_FOV.tbl -jk1 CHNLNUM -jk2 readoutmode -jv1 4 -jv2 SUB -ja1 N -ja2 S -ju1 0 -ju2 0
+
+Online Namelist file descriptor associated
+Online namelist buffer loaded: length = 688
+  Printing Log output to stdout...
+
+
+Program CALTRANS, Version 4.0
+Command-Line Namelist Filename  = ./cdf/caltrans.nl
+Command-Line Namelist Section = CALTRANSptgIN
+CalTrans Execution Mode  = 2
+CalID = 9
+Input Calibration Type list = cdelt12_distort;fovtable
+Input Calibration Rule list = 0;0
+Input Generic Outfname list = cdelt12_distort.tbl;instrument_FOV.tbl
+Science DCE Filename = bcd.fits
+CAL Destination Path = ./cal
+Processing time: 0.110000 seconds
+Current date/time: Thu Nov 30 09:14:43 2006
+Program CALTRANS, version 4.0, terminated with status = 0
+
+CalTrans exits with status = 0
+
+
+
+Perl child return code = 0
+caltrans terminated normally.
+Querying pointing history through procedural DB query using "getPH_online" ...
+
+Reading ./cdf/pointing_transfer.nl to see if "UseRefinedBPHF=1"...
+
+Super-Boresight (refined BPHF) usage flag (UseRefinedBPHF) was set to 1; proceeding to query for refined pointing history file (SBPHF)...
+
+Arguments for child program /sos/sw/S14.4.0/FORTE/downlink/bin/getPH_online: -s 846547017.322 -e 846547018.832 -f ./ptg/ptghistory.dat -t
+
+Program: "getPH_online", Version 1.5, Thu Nov 30 09:14:43 2006
+
+
+getPH_online_dbquery: For input DCE sclk range: 846547017 -> 846547019
+
+getPH_online_dbquery: BPHF name 1 =  SBPHF.0846504000.031.pntg
+getPH_online_dbquery: BPHF 1 size =  6913520
+getPH_online_dbquery: BPHF 1 version = 31
+getPH_online_dbquery: BPHF 1 startSclk = 846504000
+getPH_online_dbquery: BPHF 1 endSclk =  846547200
+getPH_online_dbquery: BPHF 1 month/year =  10 / 2006
+
+Found one pointing history file for above sclk range; continuing...
+
+getPH_online_dbquery: BPHF Path/Filename(s) =
+/sos/archive/raw/timeperiod/2006.10/refinedPointing/SBPHF.0846504000.031.pntg
+
+Header of BPHF1: SCLKBGN=846504000 SCLKEND=846547200 NSAMPLS=86401 SAMPLFREQ=2
+
+Output pointing history table filename: ./ptg/ptghistory.dat
+Number of samples extracted from BPHF(s) = 0
+
+*** Error: too few samples extracted (< 2); quitting...
+
+
+Perl child return code = 16384
+getPH_online returned non-zero exit status (64).
+
+Query for Super-Boresighsight pointing history ("refinedPointing" fileType) failed; re-executing query for regular pointing history...
+
+Arguments for child program /sos/sw/S14.4.0/FORTE/downlink/bin/getPH_online: -s 846547017.322 -e 846547018.832 -f ./ptg/ptghistory.dat
+
+Program: "getPH_online", Version 1.5, Thu Nov 30 09:14:44 2006
+
+
+getPH_online_dbquery: For input DCE sclk range: 846547017 -> 846547019
+
+getPH_online_dbquery: BPHF name 1 =  BPHF.0846504000.03.pntg
+getPH_online_dbquery: BPHF 1 size =  6913520
+getPH_online_dbquery: BPHF 1 version = 3
+getPH_online_dbquery: BPHF 1 startSclk = 846504000
+getPH_online_dbquery: BPHF 1 endSclk =  846547200
+getPH_online_dbquery: BPHF 1 month/year =  10 / 2006
+
+Found one pointing history file for above sclk range; continuing...
+
+getPH_online_dbquery: BPHF Path/Filename(s) =
+/sos/archive/raw/timeperiod/2006.10/pointingHistory/BPHF.0846504000.03.pntg
+
+Header of BPHF1: SCLKBGN=846504000 SCLKEND=846547200 NSAMPLS=86401 SAMPLFREQ=2
+
+Output pointing history table filename: ./ptg/ptghistory.dat
+Number of samples extracted from BPHF(s) = 4
+
+
+Perl child return code = 0
+getPH_online terminated normally.
+Arguments for child program /sos/sw/S14.4.0/FORTE/downlink/bin/boresightTran: -b ./ptg/ptghistory.dat -i ./cal/instrument_FOV.tbl -o ./ptg/fov.tbl -f "IRAC_Center_of_8.0umSub-Array"
+Program boresightTran is started .... Version 3.0, Thu Nov 30 09:14:44 2006
+
+boresightTran: Stored sample 1 (RA is non-negative and data exists); continuing...
+boresightTran: Stored sample 2 (RA is non-negative and data exists); continuing...
+boresightTran: Stored sample 3 (RA is non-negative and data exists); continuing...
+boresightTran: Stored sample 4 (RA is non-negative and data exists); continuing...
+
+
+boresightTran: Total number of boresight pointing samples retained after outlier rejection = 4
+
+Processing time: 0.000000 seconds
+Program boresightTran is done. Version 3.0, Thu Nov 30 09:14:44 2006
+
+
+Perl child return code = 0
+boresightTran terminated normally.
+Arguments for child program /sos/sw/S14.4.0/FORTE/downlink/bin/angleavg: -i ./ptg/fov.tbl -o bcd.fits -o2 tranhead.fits -s ./cal/cdelt12_distort.tbl
+Program angleavg is started .... Version 2.8, Thu Nov 30 09:14:44 2006
+
+ TGETKC: 
+ IRAC                                                                                                                                                                                                                                                                    
+ TGETKC: 
+ 4                                                                                                                                                                                                                                                                       
+
+angleavg: PTGDIFF (req. - actual ptg. diff. on sky in arcsec) = 0.021734
+angleavg: PTGDIFFX (req. - actual ptg. diff. along X in arcsec) = -0.020930
+angleavg: PTGDIFFY (req. - actual ptg. diff. along Y in arcsec) = 0.006727
+
+
+angleavg: PTGDIFF (req. - actual ptg. diff. on sky in arcsec) = 0.021734
+angleavg: PTGDIFFX (req. - actual ptg. diff. along X in arcsec) = -0.020930
+angleavg: PTGDIFFY (req. - actual ptg. diff. along Y in arcsec) = 0.006727
+
+Processing time: 0.050000 seconds
+Program angleavg is done. Version 2.8, Thu Nov 30 09:14:44 2006
+
+
+Perl child return code = 0
+angleavg terminated normally.
+
+Reading keywords from bcd.fits to load into "SODB:Dces" table...
+
+Loading "SODB:Dces" table...
+
+Reading keywords from bcd.fits to load into "SODB:QA_ptg_xfer" table...
+
+Loading "SODB:QA_ptg_xfer" table...
+
+Writing new dpId (140695454) to DPID.dat...
+
+Arguments for child program /sos/sw/S14.4.0/FORTE/downlink/bin/hdrupdate: bcd.fits -a DPID.dat
+
+Perl child return code = 0
+hdrupdate terminated normally.
+Arguments for child program /sos/sw/S14.4.0/FORTE/downlink/bin/hdrupd8: bcd.fits -a BPHF.dat -n
+ hdrupd8 vsn 1.5  A50126
+
+Perl child return code = 0
+hdrupd8 terminated normally.
+Arguments for child program /sos/sw/S14.4.0/FORTE/downlink/bin/fpgen: -h 1 -i bcd.fits -o bcd_fp.fits -t ./cdf/fpg_sa.tpl -b 1 -q 1 -d finalProductInfo.dat
+
+FPGen:  Final Product Generator, version 1.25, executed on 11/30/06 at 09:14:45.
+
+Contents of the command line (for this run):
+/sos/sw/S14.4.0/FORTE/downlink/bin/fpgen -h 1 -i bcd.fits -o bcd_fp.fits -t ./cdf/fpg_sa.tpl -b 1 -q 1 -d finalProductInfo.dat 
+
+FPGen processing completed on 11/30/06 at 09:14:45.
+
+
+Perl child return code = 8192
+fpgen returned non-zero exit status (32).
+Setting sandbox data-product pathname...
+(/sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3)
+
+Sandbox BCD path = /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3
+Sandbox BCD path/filename = /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/bcd_fp.fits
+Copying data products to sandbox (/sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3)...
+
+Copied bcd.fits to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/bcd.fits
+Copied bcd_fp.fits to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/bcd_fp.fits
+Copied cdf_list_fileId.txt to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/cdf_list_fileId.txt
+*** Couldn't copy imask.fits to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/imask.fits (No such file or directory); continuing...
+Copied dmask.fits to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/dmask.fits
+Copied sig_dntoflux.fits to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/sig_dntoflux.fits
+Copied sosexec/out.pline to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/sosexec/out.pline
+Copied sosexec/initialBCD_out.pline to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/sosexec/initialBCD_out.pline
+Copied cal to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3
+Copied cdf to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3
+Copied qa to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3
+Copied ptg to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3
+
+Setting SODB:DataProducts filename (/sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/bcd_fp.fits) and status (1) for dpId=140695454
+
+Loading new SODB:DpAncilProducts records for dpId = 140695454 (/sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/dmask.fits /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/sosexec/out.pline /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/sig_dntoflux.fits /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/sosexec/initialBCD_out.pline)
+
+Loading SODB:CalProducts records for dpId = 140695454
+
+fbId = 1036
+fbId = 938
+
+Replicating SODB-CalProducts-table record: science-thread dpId = 140691097, ptg-Xfer dpId = 140695454
+
+Replicating SODB-QA-data-product-table record: science-thread dpId = 140691097, ptg-Xfer dpId = 140695454
+
+Finished loading various SODB tables for dpId = 140695454
+
+
+Executing functions in LoadIrsaPtgMetaData (version 1) for input product /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/bcd_fp.fits with dpId = 140695454 ...
+
+*** Keyword for "dpIrsaPtgMetadata" table loading not found in header (CDELT1); setting to 'null'; will use "PXSCAL1" keyword; continuing...
+
+*** Keyword for "dpIrsaPtgMetadata" table loading not found in header (CDELT2); setting to 'null'; will use "PXSCAL2" keyword; continuing...
+
+Executing: /sos/sw/S14.4.0/FORTE/downlink/bin/xy2skyfromtbl -d -n 8 -j /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/bcd_fp.fits @xylist.tbl |
+
+Input data-product filename = /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/bcd_fp.fits
+Input product type is "dp" (i.e., BCD data-product)
+Input product Id (from SODB) is dpId = 140695454
+Instrument = IRAC
+Pathname of executables = /sos/sw/S14.4.0/FORTE/downlink/bin
+xy -> sky transformation software = xy2skyfromtbl
+JPEG image creation software = mJPEG
+Preview product filename = /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/bcd_fp.jpg
+ra value = 300.182123295666 deg.
+dec value = 22.7108553182454 deg.
+cra value = '20h00m43.7s'
+cdec value = '+22d42m39s'
+crval1 value = 300.182123295666 deg.
+crval2 value = 22.7108553182454 deg.
+ctype1 value = 'RA---TAN-SIP'
+ctype2 value = 'DEC--TAN-SIP'
+crpix1 value = 16.5 pix.
+crpix2 value = 16.5 pix.
+naxis1 value = 32 pix.
+naxis2 value = 32 pix.
+cdelt1 value = -0.000334003008902072 deg./pix.
+cdelt2 value = 0.000331827002810314 deg./pix.
+crota2 value = -90.7101382633627 deg.
+DATE_OBS = 2006-10-28T23:54:37.795
+epoch value = 2006.82738704322 yrs
+equinox value = 2000. yrs
+ra1, dec1 (corner 1) values = 300.17642387; 22.70559169 deg.
+ra2, dec2 (corner 2) values = 300.17633456; 22.71626913 deg.
+ra3, dec3 (corner 3) values = 300.18785299; 22.71615101 deg.
+ra4, dec4 (corner 4) values = 300.18792336; 22.70544681 deg.
+Header Data Unit value (hdu) = 0
+x-coord. of ra, dec = 0.463769499746149
+y-coord. of ra, dec = -0.79740795782544
+z-coord. of ra, dec = 0.386080820427366
+Value of r = x**2 + y**2 + z**2 is 1
+
+SDM Error [2006-11-30 09:14:47]: Could not do stmt execute procedure adddpIrsaPtgMetadata (
+                 140695454, 300.182123295666, 22.7108553182454, '20h00m43.7s', '+22d42m39s', 300.182123295666, 22.7108553182454, 'RA---TAN-SIP',
+                 'DEC--TAN-SIP', 16.5, 16.5, 32, 32, -0.000334003008902072,
+                 0.000331827002810314, -90.7101382633627, 2006.82738704322, 2000., 300.17642387, 22.70559169, 300.17633456, 22.71626913,
+                 300.18785299, 22.71615101, 300.18792336, 22.70544681, 0, 0.463769499746149, -0.79740795782544, 0.386080820427366)
+SDM Error [2006-11-30 09:14:47]: Could not do stmt execute procedure adddpIrsaPtgMetadata (
+                 140695454, 300.182123295666, 22.7108553182454, '20h00m43.7s', '+22d42m39s', 300.182123295666, 22.7108553182454, 'RA---TAN-SIP',
+                 'DEC--TAN-SIP', 16.5, 16.5, 32, 32, -0.000334003008902072,
+                 0.000331827002810314, -90.7101382633627, 2006.82738704322, 2000., 300.17642387, 22.70559169, 300.17633456, 22.71626913,
+                 300.18785299, 22.71615101, 300.18792336, 22.70544681, 0, 0.463769499746149, -0.79740795782544, 0.386080820427366)
+DBMS Error [2006-11-30 09:14:47]: SQL: -710: Table (informix.dataproducts) has been dropped, altered or renamed.
+DBMS Error [2006-11-30 09:14:47]: SQL: -710: Table (informix.dataproducts) has been dropped, altered or renamed.
+
+*** Could not load dpIrsaPtgMetadata table in SODB; continuing...
+
+Executing: /sos/sw/S14.4.0/FORTE/downlink/bin/mJPEG -ct 1 -gray /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/bcd_fp.fits 0s 99.9% gaussian -out /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/bcd_fp.jpg
+[struct stat="OK", min=3.44592, max=1175.98]
+
+...Made preview image: /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/bcd_fp.jpg
+
+Loaded SODB:DpAncilProducts for dpId = 140695454 with /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/19/01/3/bcd_fp.jpg
+Disconnected from SODB by w_pointinghistory.pl.
+
+
+System Exit Code (          w_pointinghistory.pl): 32
+
+Copying log file(s) to sandbox...
+

@@ -1,0 +1,15 @@
+\char Comment 'Derived from BodyFrames_FTU_14a.xls'
+| FOV_Name                                           |       psi_Ins      |     theta_Ins       |       phi_Ins       | psi_sig | theta_sig | psi_theta_csd |
+| char                                               |       double       |     double          |       double        | double  | double    | double        |
+|                                                    |       degree       |     degree          |       degree        | arcsec  | arcsec    | arcsec        |
+  IRAC_Center_of_3.6&5.8umArray                        -6.127370408288e-02    4.767483333333e-02    3.595782895000e+02    0.1000     0.1000     0.0000 
+  IRAC_Center_of_3.6umArray                            -6.229085229378e-02    4.767482984423e-02    3.594576875737e+02    0.1000     0.1000     0.0000 
+  IRAC_Center_of_5.8umArray                            -6.011241613737e-02    4.738807114546e-02    3.596988907384e+02    0.1000     0.1000     0.0000 
+  IRAC_Center_of_3.6umSub-array                        -9.802900428398e-02    8.280725676783e-02    3.594576875737e+02    0.1000     0.1000     0.0000 
+  IRAC_Center_of_5.8umSub-array                        -9.518010781374e-02    1.206482471483e-02    3.596988907384e+02    0.1000     0.1000     0.0000 
+  IRAC_Center_of_4.5&8.0umArray                         5.081246666667e-02    4.568081790943e-02    3.596484745000e+02    0.1000     0.1000     0.0000 
+  IRAC_Center_of_4.5umArray                             5.081246072068e-02    4.534389634694e-02    3.592798521238e+02    0.1000     0.1000     0.0000 
+  IRAC_Center_of_8.0umArray                             5.113136354373e-02    4.586275621002e-02    1.709693693096e-02    0.1000     0.1000     0.0000 
+  IRAC_Center_of_4.5umSub-Array                         1.529472965417e-02    8.001648269117e-02    3.592798521238e+02    0.1000     0.1000     0.0000 
+  IRAC_Center_of_8.0umSub-Array                         1.610025868615e-02    1.087959579878e-02    1.709693693096e-02    0.1000     0.1000     0.0000 
+  IRAC_FOV_bwn_3.6&5.8_and_4.5&8.0_for_mapping         -5.114858333334e-03    4.656738750000e-02    3.596133820000e+02    0.1000     0.1000     0.0000 

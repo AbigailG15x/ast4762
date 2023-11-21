@@ -1,0 +1,837 @@
+ hdrupd8 vsn 1.5  A50126
+******************************************************************
+Executing IRAC science pipeline
+******************************************************************
+Pipeline executing sanity_datatype
+sanity_datatype -i ../fos16.fits -t1 cdf/sanity_datatype1.tbl -t2 cdf/sanity_datatype2.tbl -o1 qa/sanity_datatype1.tbl -o2 qa/sanity_datatype2.tbl 
+******************************************************************
+Program Sanity_datatype is started .... Version 1.0, Thu Nov 30 07:56:52 2006
+Input Image File = ../fos16.fits
+Input Data Table 1 = cdf/sanity_datatype1.tbl
+Input Data Table 2 = cdf/sanity_datatype2.tbl
+Output Filename1 = qa/sanity_datatype1.tbl
+Output Filename2 = qa/sanity_datatype2.tbl
+Log File = stdout
+I_Debug = 0
+I_Verbose = 0
+I_SuperVerbose = 0
+Processing time: 0.010000 seconds
+Program Sanity_datatype is done. Version 1.0, Thu Nov 30 07:56:52 2006
+
+
+sanity_datatype   exit_value =   0    execution_time = 0.020s
+******************************************************************
+Pipeline executing qatool
+qatool -i ../fos16.fits -n cdf/pn107.nl -nb QATOOLDCE -a /sos/sw/S14.4.0/FORTE/downlink/include -o qa/DCE_qatool 
+******************************************************************
+qatool_parse_namelist: Information only: Namelist block-name = &QATOOLDCE
+Program qatool, Version 5.9
+Namelist File  = cdf/pn107.nl
+Input File = ../fos16.fits
+Output Data Filename Base = qa/DCE_qatool
+Statistics Group = 0
+Percent-Scaling Flag = 0
+Calculation Type = 1
+(set-up to do additional computations for four readout channels)
+Number of Mean Absolute Deviations for Histogram Half-Width Coverage = 5
+Number of Bins in Histograms = 41
+Central fraction for trimmed average = 0.810000
+Central fraction for trimmed std. dev. = 0.720000
+Bad-pixel tolerance fraction = 0.340000
+Statistics Box X position = 3
+Statistics Box Y position = 4
+Statistics Box X width = 27
+Statistics Box Y height = 33
+Input-Image Transpose Flag = 1
+Unsigned Integer Flag = 0
+Data-Plane Flag = 1
+Number Edge Rows/Cols Skipped = 10
+Keyword Prefix = dce
+Ancillary Data-File Path = /sos/sw/S14.4.0/FORTE/downlink/include
+Verbose flag = 0
+Super-verbose flag = 0
+Debug flag = 0
+Performed statistical and histogram calculations.
+Program qatool: Status Message: 0x0000
+Normal exit from Function 0x0000: LOG_WRITER
+Processing time: 0.360000 seconds
+Current date/time: Thu Nov 30 07:56:52 2006
+Program qatool, version 5.9, terminated.
+
+qatool   exit_value =   0    execution_time = 0.410s
+******************************************************************
+Pipeline executing sanity_check
+sanity_check -i qa/DCE_qatool.tbl -o qa/sanity_check.tbl 
+******************************************************************
+Program Sanity_check is started .... Version 1.0, Thu Nov 30 07:56:52 2006
+
+Input File = qa/DCE_qatool.tbl
+Output = qa/sanity_check.tbl
+Processing time: 0.010000 seconds
+Current date/time: Thu Nov 30 07:56:52 2006
+Program Sanity_check, version 1.0, terminated.
+
+sanity_check   exit_value =   0    execution_time = 0.030s
+******************************************************************
+Pipeline executing tranhead
+tranhead -i ../fos16.fits -n cdf/pn107.nl -k /scr/S14.4.0/cdf/ctd/telemetry_dictionary.dat -a /sos/sw/S14.4.0/FORTE/downlink/include -o tranhead.fits -t, cdf/Keyword_Include_List.dat 
+******************************************************************
+*** Keyword A0649E00...value is blank.
+
+Program tranhead, Version 12.6
+Namelist File  = cdf/pn107.nl
+Input File = ../fos16.fits
+Dictionary File = /scr/S14.4.0/cdf/ctd/telemetry_dictionary.dat
+CTD Version String = 3.0.94S
+Keyword-Include-List File = cdf/Keyword_Include_List.dat
+Translated-Keyword File = tranhead.hdr
+CSPICE leapseconds kernel = /scr/S14.4.0/cdf/spice/leapseconds.ker
+CSPICE SCLK_SCET kernel = /scr/S14.4.0/cdf/spice/sclk_scet.ker
+Output File = tranhead.fits
+Operation Type = 1
+FITS-Header Comment Flag = 1
+Ignore Frames (1st) = -1
+Ignore Frames (2nd and higher) = -1
+Central fraction for trimmed average  = 0.900000
+Central fraction for trimmed std. dev. = 0.900000
+Gain = 3.800000
+Gain_RdOutCh_1 = 3.800000
+Gain_RdOutCh_2 = 3.800000
+Gain_RdOutCh_3 = 3.800000
+Gain_RdOutCh_4 = 3.800000
+Ancillary Data-File Path = /sos/sw/S14.4.0/FORTE/downlink/include
+Verbose flag = 0
+Super-verbose flag = 0
+Debug flag = 0
+Configured to perform forward FITS keyword translation.
+tranhead Status Message: 0x0000
+Normal exit from Function 0x0000: LOG_WRITER
+A total of        0   NaN's were produced in the results.
+Processing time: 0.110000 seconds
+Current date/time: Thu Nov 30 07:56:53 2006
+Program tranhead, version 12.6, terminated.
+
+tranhead   exit_value =   0    execution_time = 0.170s
+ hdrupd8 vsn 1.5  A50126
+******************************************************************
+Pipeline executing caltrans
+caltrans -n cdf/pn107.nl -m 2 -a 9 -b /scr3/S14.4.0/dlcaldata/irac -s tranhead.fits -o cal -u SUB -jk1 CHNLNUM -jv1 4 -ja1 N -ju1 0 -js1 flip -jk2 CHNLNUM;AFOWLNUM;AWAITPER;FRAMTIME;HDRMODE -jv2 4;8;24;0.40;F -ja2 N;N;N;N;S -ju2 0;0;0;0;0 -js2 sigma;cmask -jk3 CHNLNUM;ADCEID;AFOWLNUM;AWAITPER;FRAMTIME;HDRMODE -jv3 4;0;8;24;0.40;F -ja3 N;N;N;N;N;S -ju3 0;0;0;0;0;0 -js3 cmask -jk4 CHNLNUM -jv4 4 -ja4 N -ju4 0 -js4 cmask -jk5 CHNLNUM -jv5 4 -ja5 N -ju5 0 -js5 cmask -jk6 CHNLNUM -jv6 4 -ja6 N -ju6 0 -e CALTRANSsciSUB 
+******************************************************************
+
+Online Namelist file descriptor associated
+Online namelist buffer loaded: length = 6519
+
+Warning !:  Ancillary file #1  with full suffix filename  '/sos/archive/fallbacks/IRAC001700/SUB_0.4s_0.4sf8d1r1_ch4_v1.2.0_dark_sigma.fits'  NOT in archive/sandbox !!.
+Proceed to the next suffix fileprocessing .....
+
+Warning !:  Ancillary file #2  with full suffix filename  '/sos/archive/fallbacks/IRAC001700/SUB_0.4s_0.4sf8d1r1_ch4_v1.2.0_dark_cmask.fits'  NOT in archive/sandbox !!.
+Proceed to the next suffix fileprocessing .....
+
+Warning !:  Ancillary-suffix file #1: '/scr3/S14.4.0/dlcaldata/irac/fb875_SUB_0.4s_0.4sf8d1r1_ch4_v1.2.0_dark_sigma.fits'  could NOT be identified on cache.
+Processing continues ..... 
+
+
+Warning !:  Ancillary-suffix file #2: '/scr3/S14.4.0/dlcaldata/irac/fb875_SUB_0.4s_0.4sf8d1r1_ch4_v1.2.0_dark_cmask.fits'  could NOT be identified on cache.
+Processing continues ..... 
+
+
+Warning !:  Ancillary file #1  with full suffix filename  '/sos/archive/fallbacks/IRAC002400/irac_b4_sa_20051019_lincal_cmask.fits'  NOT in archive/sandbox !!.
+Proceed to the next suffix fileprocessing .....
+
+Warning !:  Ancillary-suffix file #1: '/scr3/S14.4.0/dlcaldata/irac/fb1024_irac_b4_sa_20051019_lincal_cmask.fits'  could NOT be identified on cache.
+Processing continues ..... 
+
+
+Warning !:  Ancillary file #1  with full suffix filename  '/sos/archive/fallbacks/IRAC002400/irac_b4_sa_superskyflat_102705_cmask.fits'  NOT in archive/sandbox !!.
+Proceed to the next suffix fileprocessing .....
+
+Warning !:  Ancillary-suffix file #1: '/scr3/S14.4.0/dlcaldata/irac/fb1018_irac_b4_sa_superskyflat_102705_cmask.fits'  could NOT be identified on cache.
+Processing continues ..... 
+
+  Printing Log output to stdout...
+
+
+Program CALTRANS, Version 4.0
+Command-Line Namelist Filename  = cdf/pn107.nl
+Command-Line Namelist Section = CALTRANSsciSUB
+CalTrans Execution Mode  = 2
+CalID = 9
+Input Calibration Type list = pmask;labdark;skydark;lincal;sky_flat;fluxconv
+Input Calibration Rule list = 0;0;300;0;0;0
+Input Generic Outfname list = pmask.fits;labdark.fits;skydark.fits;lincal.fits;skyflat.fits;fluxconv
+Science DCE Filename = tranhead.fits
+CAL Destination Path = cal
+Processing time: 0.110000 seconds
+Current date/time: Thu Nov 30 07:56:56 2006
+Program CALTRANS, version 4.0, terminated with status = 16
+
+CalTrans exits with status = 16
+
+
+
+caltrans   exit_value =  16    execution_time = 0.110s
+******************************************************************
+Pipeline executing cvti2r4
+cvti2r4 -i tranhead.fits -a 0.4375 -b 65535 -d cal/dmask_for_raw.fits -o cvti2r4.fits -m row 
+******************************************************************
+ SIRTF I*2-to-R*4 Data Cube Conversion program vsn 1.30 A50506
+ Input file:  tranhead.fits
+ Using offset =    0.437500
+ Using BLANK-fill value:   65535
+ Output file: cvti2r4.fits
+ Missing-data pattern specified as rows
+
+cvti2r4   exit_value =   0    execution_time = 0.010s
+Image has barrel shift = 3
+Computed truncation correction 0.5*(1-2^-ABARREL) = 0.4375
+******************************************************************
+Pipeline executing hdrupd8
+hdrupd8 cvti2r4.fits -a cdf/hdrupd8_cubify.dat -d cdf/hdrupd8_planify.dat 
+******************************************************************
+ hdrupd8 vsn 1.5  A50126
+ WARNING: keyword to be deleted not found: NAXIS3  
+
+hdrupd8   exit_value =   0    execution_time = 0.020s
+******************************************************************
+Pipeline executing hdrupd8
+hdrupd8 dmask.fits -a cdf/hdrupd8_cubify.dat -d cdf/hdrupd8_planify.dat 
+******************************************************************
+ hdrupd8 vsn 1.5  A50126
+ WARNING: keyword to be deleted not found: NAXIS3  
+
+hdrupd8   exit_value =   0    execution_time = 0.020s
+******************************************************************
+Pipeline executing iracwrapdet1
+iracwrapdet1 -i cvti2r4.fits -n cdf/pn107.nl -p cal/pmask.fits -d dmask.fits -w wmask.fits -v 
+******************************************************************
+Pipeline Module IRACWRAPDET1 Version 1.3
+Processing time Thu Nov 30 07:56:57 2006
+iracwrapdet1_parse_args: Namelist File = 	cdf/pn107.nl
+iracwrapdet1_parse_args: Pmask File = 	cal/pmask.fits
+iracwrapdet1_parse_args: Dmask File = 	dmask.fits
+iracwrapdet1_parse_args: Wmask File = 	wmask.fits
+iracwrapdet1_parse_args: Input File = 	cvti2r4.fits
+iracwrapdet1_parse_args: I_Verbose = 			1
+iracwrapdet1_read_data: Data read from file:
+cvti2r4.fits
+iracwrapdet1_read_data: I_NX = 32
+iracwrapdet1_read_data: I_NY = 32
+iracwrapdet1_read_data: I_NZ = 64
+iracwrapdet1_parse_namelist: Namelist File = 	cdf/pn107.nl
+iracwrapdet1_compute_results: Numerical Computations finished
+Thu Nov 30 07:56:57 2006
+iracwrapdet1_output: Results written to file(s).
+Time = 0.000 seconds
+iracwrapdet1_error_handler: Error Handler finished.
+iracwrapdet1_exit: Memory Deallocated.
+exit code 0
+
+iracwrapdet1   exit_value =   0    execution_time = 0.030s
+******************************************************************
+Pipeline executing iracwrapdet2
+iracwrapdet2 -i cvti2r4.fits -n cdf/pn107.nl -p cal/pmask.fits -d dmask.fits -w wmask.fits -a /sos/sw/S14.4.0/FORTE/downlink/include 
+******************************************************************
+
+Program iracwrapdet2, Version 1.4
+Namelist File  = cdf/pn107.nl
+FITS Input Image = cvti2r4.fits
+Pmask File = cal/pmask.fits
+Dmask File = dmask.fits
+Wmask File = mask.fits
+M-Level       chan1     chan2     chan3     chan4
+            60000.0   60000.0   60000.0   60000.0
+Tolerance     chan1     chan2     chan3     chan4
+             1200.0    1200.0    1200.0    1200.0
+Pmask Maximum = 65535
+Dmask Maximum = 65535
+Ancillary Data-File Path = /sos/sw/S14.4.0/FORTE/downlink/include
+Verbose flag = 0
+Super-verbose flag = 0
+Debug flag = 0
+iracwrapdet2 Status Message      0x0000
+Normal exit from Function 0x0000: LOG_WRITER
+Processing time: 0.140000 seconds
+Current date/time: Thu Nov 30 07:56:58 2006
+Program iracwrapdet2, version 1.4, terminated
+
+
+iracwrapdet2   exit_value =   0    execution_time = 0.160s
+******************************************************************
+Pipeline executing iracwrapcorr
+iracwrapcorr -i cvti2r4.fits -p cal/pmask.fits -d dmask.fits -w wmask.fits -o iracwrapcorr.fits 
+******************************************************************
+Pipeline Module IRACWRAPCORR Version 1.3
+Processing time Thu Nov 30 07:56:58 2006
+iracwrapcorr_parse_namelist: Information only: Namelist not specified.
+Thu Nov 30 07:56:58 2006
+Time = 0.010 seconds
+exit code 0
+
+iracwrapcorr   exit_value =   0    execution_time = 0.030s
+******************************************************************
+Pipeline executing iracnorm
+iracnorm -i iracwrapcorr.fits -p cal/pmask.fits -d dmask.fits -o iracnorm.fits 
+******************************************************************
+Pipeline Module IRACWNORM Version 1.10
+Processing time Thu Nov 30 07:56:58 2006
+
+Thu Nov 30 07:56:58 2006
+Time = 0.010 seconds
+exit code 0
+
+iracnorm   exit_value =   0    execution_time = 0.040s
+******************************************************************
+Pipeline executing iracebwc
+iracebwc -i iracnorm.fits -n cdf/pn107.nl -p cal/pmask.fits -d dmask.fits -o iracebwc.fits 
+******************************************************************
+Pipeline Module IRACEBWC Version 1.2
+Processing time Thu Nov 30 07:56:58 2006
+
+Thu Nov 30 07:56:58 2006
+Time = 0.010 seconds
+exit code 0
+
+iracebwc   exit_value =   0    execution_time = 0.030s
+HDR mode   =  f
+AOR Template Time     =  0.4
+DCE Frame Time    =  0.40
+EXTRpt     =  
+Frame NOBF =  0
+
+Immed  Delay = 27.1010000705719
+Frame  Delay = 27.1010000705719
+
+ hdrupd8 vsn 1.5  A50126
+******************************************************************
+Pipeline executing darksubng
+darksubng -i iracebwc.fits -a /sos/sw/S14.4.0/FORTE/downlink/include -p cal/pmask.fits -d dmask.fits -o labdarksub.fits -cc cal/labdark.fits -v 
+******************************************************************
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: namelist not given
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: input uncertainty image not given
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: output uncertainty image not given
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: WARNING no uncertainty calculations will be performed
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Namelist               = []
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Input image            = [iracebwc.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Input uncertainty      = []
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Output image           = [!labdarksub.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Output uncertainty     = []
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Dark                   = [cal/labdark.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Pmask file             = [cal/pmask.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Pmask fatality bitmask = [65536]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Dmask file             = [dmask.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Dmask fatality bitmask = [65536]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Cmask file             = []
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Cmask fatality bitmask = [65536]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Logfile                = []
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Ancillary Path         = [/sos/sw/S14.4.0/FORTE/downlink/include]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Uncertainty calculations will not be made
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: WARNING cal/labdark.fits has no BUNIT key
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: WARNING assuming cal/labdark.fits is in DN
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: WARNING cal/labdark.fits has no EXPTIME key
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: WARNING cal/labdark.fits has no GAIN keywords
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: compute - performing any unit conversions
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: compute - starting subtraction with masking 
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Processing successful; Exiting
+
+darksubng   exit_value =   0    execution_time = 0.030s
+READ Noise !! =  5.5
+******************************************************************
+Pipeline executing snestimator
+snestimator -i labdarksub.fits -n cdf/pn107.nl -a /sos/sw/S14.4.0/FORTE/downlink/include -p cal/pmask.fits -d dmask.fits -on sig_snestimator.fits -g 3.80 -r 5.5 
+******************************************************************
+
+Program SNESTIMATOR, Version 1.3
+Namelist File  = cdf/pn107.nl
+Input FITS Image = labdarksub.fits
+Noise Image = sig_snestimator.fits
+Denominator type = IRAC_MODEL
+Edge Pixels Excluded = 0
+Gain Channel 1 = 3.800000 Channel 2 = 3.800000 Channel 3 = 3.800000 Channel 4 = 3.800000
+Read Noise = 5.500000
+Confusion Sigma = 0.000000
+Ancillary Data-File Path = /sos/sw/S14.4.0/FORTE/downlink/include
+Verbose flag = 0
+Super-verbose flag = 0
+Debug flag = 0
+snestimator Status Message      0x0000
+Normal exit from Function 0x0000: LOG_WRITER
+Processing time: 0.050000 seconds
+Current date/time: Thu Nov 30 07:56:59 2006
+Program SNESTIMATOR, version 1.3, terminated
+
+
+snestimator   exit_value =   0    execution_time = 0.060s
+******************************************************************
+Pipeline executing darksubng
+darksubng -i iracebwc.fits -iu sig_snestimator.fits -a /sos/sw/S14.4.0/FORTE/downlink/include -p cal/pmask.fits -d dmask.fits -o labdarksub.fits -ou sig_labdarksub.fits -cc cal/labdark.fits -v 
+******************************************************************
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: namelist not given
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Namelist               = []
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Input image            = [iracebwc.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Input uncertainty      = [sig_snestimator.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Output image           = [!labdarksub.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Output uncertainty     = [!sig_labdarksub.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Dark                   = [cal/labdark.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Pmask file             = [cal/pmask.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Pmask fatality bitmask = [65536]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Dmask file             = [dmask.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Dmask fatality bitmask = [65536]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Cmask file             = []
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Cmask fatality bitmask = [65536]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Logfile                = []
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Ancillary Path         = [/sos/sw/S14.4.0/FORTE/downlink/include]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Uncertainty calculations will be made
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: WARNING cal/labdark.fits has no BUNIT key
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: WARNING assuming cal/labdark.fits is in DN
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: WARNING cal/labdark.fits has no EXPTIME key
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: WARNING cal/labdark.fits has no GAIN keywords
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: compute - performing any unit conversions
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: compute - starting subtraction with masking 
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Processing successful; Exiting
+
+darksubng   exit_value =   0    execution_time = 0.110s
+******************************************************************
+Pipeline executing fowlinearize
+fowlinearize -i1 labdarksub.fits -i3 sig_labdarksub.fits -n cdf/pn107.nl -a /sos/sw/S14.4.0/FORTE/downlink/include -ip cal/pmask.fits -i2 cal/lincal.fits -id dmask.fits -o1 fowlinearize.fits -o2 sig_fowlinearize.fits -c 10 
+******************************************************************
+
+Program FOWLINEARIZE, Version 4.9
+Namelist File  = cdf/pn107.nl
+Input File 1 = labdarksub.fits
+Input File 2 = cal/lincal.fits
+Input File 3 = sig_labdarksub.fits
+Model_Flag(1=quad. 2=cubic) = 1
+Clock_Readout(10=sub-array, 200=full-array) = 10.000000
+Input PMask Image = cal/pmask.fits
+Unusable PMask Bits = 16384
+Input DMask Image = dmask.fits
+Unusable DMask Bits = 8192
+Not-linearized DMask Bit = 4096
+Not-linearized DMask Bit due to lincal-model saturation = 8192
+Output File 1 = fowlinearize.fits
+Output File 2 = sig_fowlinearize.fits
+Ancillary Data-File Path = /sos/sw/S14.4.0/FORTE/downlink/include
+Verbose flag = 0
+Super-verbose flag = 0
+Debug flag = 0
+Performed linearity correction.
+Program fowlinearize: Status Message: 0x0000
+Normal exit from Function 0x0000: LOG_WRITER
+Processing time: 0.100000 seconds
+Current date/time: Thu Nov 30 07:57:00 2006
+Program FOWLINEARIZE, version 4.9, terminated.
+
+fowlinearize   exit_value =   0    execution_time = 0.160s
+Read Noise =  5.5
+ hdrupd8 vsn 1.5  A50126
+******************************************************************
+Pipeline executing bgmodel
+bgmodel -i fowlinearize.fits -n cdf/pn107.nl -h 
+******************************************************************
+
+Online Namelist file descriptor associated
+Online namelist buffer loaded: length = 6519
+bgmodel_log_writer: Printing Log output to stdout
+bgmodel  Version 1.0
+Namelist File  = cdf/pn107.nl
+Input Image = fowlinearize.fits
+Ephemeris = /scr3/S14.4.0/cdf/spice/sirtf.bsp
+LeapSec Kernel = /scr3/S14.4.0/cdf/spice/leapseconds.ker
+SPK Kernel = /scr3/S14.4.0/cdf/spice/de.bsp
+
+bgmodel  Status Message      0x0000: No error.
+Time = 0.030 seconds
+
+Background exits with status = 0
+
+
+bgmodel   exit_value =   0    execution_time = 0.050s
+******************************************************************
+Pipeline executing hdrupd8
+hdrupd8 fowlinearize.fits -a addkeys.dat 
+******************************************************************
+ hdrupd8 vsn 1.5  A50126
+
+hdrupd8   exit_value =   0    execution_time = 0.050s
+SkyDk Med DN      = 17.43023 
+Exposure time     = 0.32
+SkyDk Med DN rate = 54.46946875
+Flux Conv         = 0.2021 
+SkyDk Med Flux    = 11.008279634375
+Image File = fowlinearize.fits 
+
+ hdrupd8 vsn 1.5  A50126
+ hdrupd8 vsn 1.5  A50126
+ hdrupd8 vsn 1.5  A50126
+ hdrupd8 vsn 1.5  A50126
+******************************************************************
+Pipeline executing darksubng
+darksubng -i fowlinearize.fits -iu sig_fowlinearize.fits -a /sos/sw/S14.4.0/FORTE/downlink/include -p cal/pmask.fits -d dmask.fits -o skydarksub.fits -ou sig_skydarksub.fits -cc cal/skydark.fits -v -c cal/skydark_cmask.fits 
+******************************************************************
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: namelist not given
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Namelist               = []
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Input image            = [fowlinearize.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Input uncertainty      = [sig_fowlinearize.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Output image           = [!skydarksub.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Output uncertainty     = [!sig_skydarksub.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Dark                   = [cal/skydark.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Pmask file             = [cal/pmask.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Pmask fatality bitmask = [65536]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Dmask file             = [dmask.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Dmask fatality bitmask = [65536]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Cmask file             = [cal/skydark_cmask.fits]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Cmask fatality bitmask = [65536]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Logfile                = []
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Ancillary Path         = [/sos/sw/S14.4.0/FORTE/downlink/include]
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Uncertainty calculations will be made
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: compute - performing any unit conversions
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: compute - starting subtraction with masking 
+/sos/sw/S14.4.0/FORTE/downlink/bin/darksubng: Processing successful; Exiting
+
+darksubng   exit_value =   0    execution_time = 0.110s
+******************************************************************
+Pipeline executing darkdrift
+darkdrift -i skydarksub.fits -iu sig_skydarksub.fits -n cdf/pn107.nl -a /sos/sw/S14.4.0/FORTE/downlink/include -o1 darkdrift.fits -o2 darkdriftcorr.fits -o3 darkdrift.tbl -ou sig_darkdrift.fits 
+******************************************************************
+Program darkdrift, Version 4.0
+Namelist File  = cdf/pn107.nl
+Input Image = skydarksub.fits
+Input Uncertainty Image = sig_skydarksub.fits
+Output Image 1 (corrected image) = darkdrift.fits
+Output Image 2 (corrections) = darkdriftcorr.fits
+Output Image 3 (uncertainties) = sig_darkdrift.fits
+Output File 3 = darkdrift.tbl
+Central fraction for trimmed average  = 0.900000
+Central fraction for trimmed std. dev. = 0.900000
+Time_Input = 0.250000
+Time_Before = 0.000000
+Time_After = 1.000000
+Temp_Input = 270.000000
+Temp_Before = 280.000000
+Temp_After = 260.000000
+Calculation Type = 1
+Input-Image Transpose Flag = 1
+Multiplicative-Correction Flag (Additive if zero) = 0
+Readout Channel to exclude (none if zero) = 0
+Data-Plane Flag = 1
+Ancillary Data-File Path = /sos/sw/S14.4.0/FORTE/downlink/include
+Verbose flag = 0
+Super-verbose flag = 0
+Debug flag = 0
+Dark-current offsets estimated from input image.
+Program darkdrift: Status Message: 0x0000
+Normal exit from Function 0x0000: LOG_WRITER
+Processing time: 7.810000 seconds
+Current date/time: Thu Nov 30 07:57:32 2006
+Program darkdrift, version 4.0, terminated.
+
+darkdrift   exit_value =   0    execution_time = 7.870s
+******************************************************************
+Pipeline executing flatap
+flatap -i darkdrift.fits -p cal/pmask.fits -f cal/skyflat.fits -ui sig_darkdrift.fits -uo sig_flatap.fits -d dmask.fits -o flatap.fits 
+******************************************************************
+Pipeline Module FLATAP Version 1.5
+Processing time Thu Nov 30 07:57:32 2006
+
+flatap_parse_namelist: Information only: Namelist not specified.
+Thu Nov 30 07:57:32 2006
+flatap_log_writer: Could not open Log File, using stdout
+Flatap Version 1.5
+Namelist File  = 
+Input DCE = darkdrift.fits
+Output DCE = !flatap.fits
+Flatfield = cal/skyflat.fits
+Input Uncertainty = sig_darkdrift.fits
+Output Uncertainty = !sig_flatap.fits
+Pmask File = cal/pmask.fits
+Pmask Mask = 128
+Dmask File = dmask.fits
+Dmask Mask = 16384
+Cmask File = 
+Cmask Mask = 256
+Trans CAL File = 
+Trans CAL CMask File = 
+Processing Log File = 
+Time =    0.03 seconds
+*********************
+
+Time = 0.030 seconds
+exit code 0
+
+flatap   exit_value =   0    execution_time = 0.050s
+******************************************************************
+Pipeline executing dntoflux
+dntoflux -i flatap.fits -iu sig_flatap.fits -n cdf/pn107.nl -co 0 -c 0.2021 -u 0.0041 -a /sos/sw/S14.4.0/FORTE/downlink/include -o1 dntoflux.fits -ou sig_dntoflux.fits -t 1 
+******************************************************************
+
+Program dntoflux, Version 4.1
+Namelist File  = cdf/pn107.nl
+Input Image = flatap.fits
+Output File 1 = dntoflux.fits
+Output Uncertainty Image = sig_dntoflux.fits
+Operation flag = 0
+Conversion factor = 0.202100
+Input Uncertainty Image = sig_flatap.fits
+Conversion-factor uncertainty = 0.004100
+Output BUNIT setting = MJy/sr
+Normalize-by-EXPTIME Flag = 1
+EXPTIME = 0.320000
+Data-Plane Flag = 1
+Ancillary Data-File Path = /sos/sw/S14.4.0/FORTE/downlink/include
+Verbose flag = 0
+Super-verbose flag = 0
+Debug flag = 0
+Terminating data-units-conversion program.
+dntoflux Status Message: 0x0000
+Normal exit from Function 0x0000: LOG_WRITER
+A total of        0   NaN's were produced in the results.
+Processing time: 0.060000 seconds
+Current date/time: Thu Nov 30 07:57:33 2006
+Program dntoflux, version 4.1, terminated.
+
+dntoflux   exit_value =   0    execution_time = 0.110s
+******************************************************************
+Pipeline executing qatool
+qatool -i dntoflux.fits -n cdf/pn107.nl -nb QATOOLBCD -a /sos/sw/S14.4.0/FORTE/downlink/include -o qa/BCD_qatool 
+******************************************************************
+qatool_parse_namelist: Information only: Namelist block-name = &QATOOLBCD
+Program qatool, Version 5.9
+Namelist File  = cdf/pn107.nl
+Input File = dntoflux.fits
+Output Data Filename Base = qa/BCD_qatool
+Statistics Group = 0
+Percent-Scaling Flag = 0
+Calculation Type = 1
+(set-up to do additional computations for four readout channels)
+Number of Mean Absolute Deviations for Histogram Half-Width Coverage = 5
+Number of Bins in Histograms = 41
+Central fraction for trimmed average = 0.810000
+Central fraction for trimmed std. dev. = 0.720000
+Bad-pixel tolerance fraction = 0.900000
+Statistics Box X position = 3
+Statistics Box Y position = 4
+Statistics Box X width = 20
+Statistics Box Y height = 23
+Input-Image Transpose Flag = 1
+Unsigned Integer Flag = 0
+Data-Plane Flag = 1
+Number Edge Rows/Cols Skipped = 2
+Keyword Prefix = bcd
+Ancillary Data-File Path = /sos/sw/S14.4.0/FORTE/downlink/include
+Verbose flag = 0
+Super-verbose flag = 0
+Debug flag = 0
+Performed statistical and histogram calculations.
+Program qatool: Status Message: 0x0000
+Normal exit from Function 0x0000: LOG_WRITER
+Processing time: 0.820000 seconds
+Current date/time: Thu Nov 30 07:57:37 2006
+Program qatool, version 5.9, terminated.
+
+qatool   exit_value =   0    execution_time = 0.880s
+******************************************************************
+Pipeline executing chkmask
+chkmask dmask.fits -q qa/BCD_qatool.qa 
+******************************************************************
+ chkmask vsn 1.35 A40312
+ 
+ No. of occurrences of the only status combination:
+   2048 occurrences of   16 (4)                                 
+ 
+ Status Bit: No. of Pixels
+   0:   0
+   1:   0
+   2:   0
+   3:   0
+   4:   2048
+   5:   0
+   6:   0
+   7:   0
+   8:   0
+   9:   0
+   10:   0
+   11:   0
+   12:   0
+   13:   0
+   14:   0
+ 
+
+chkmask   exit_value =   0    execution_time = 0.040s
+******************************************************************
+Loading QA information for DCE and BCD product
+Keyword APDUV1E not found in header
+Keyword APDUV2E not found in header
+Keyword APDUV3E not found in header
+Keyword APDUI1E not found in header
+Keyword APDUI2E not found in header
+Keyword APDUI3E not found in header
+Could not append keyword APDUV1E to QA file qa/DCE_qatool.qa
+Could not append keyword APDUV2E to QA file qa/DCE_qatool.qa
+Could not append keyword APDUV3E to QA file qa/DCE_qatool.qa
+Could not append keyword APDUI1E to QA file qa/DCE_qatool.qa
+Could not append keyword APDUI2E to QA file qa/DCE_qatool.qa
+Could not append keyword APDUI3E to QA file qa/DCE_qatool.qa
+******************************************************************
+Pipeline executing qaloader
+qaloader -i qa/DCE_qatool.qa -tablename qa_iracdce -o qa/qaloader.sql -role pipelineswrole 
+******************************************************************
+2006/11/30 07:57:37 BEGIN qaloader v1.12
+ -i (QA_FILE) qa/DCE_qatool.qa
+ -tablename (TABLENAME) qa_iracdce
+ -o (SQL_FILE) qa/qaloader.sql
+ -role (ROLE) pipelineswrole
+Using metadata version 13.0b
+
+QA values ingested:
+{4.223544e+01} {}
+dceAveFI_1       4.223544e+01 
+{3.490319e+01} {}
+dceAveR1_1       3.490319e+01 
+{4.857318e+01} {}
+dceAveR2_1       4.857318e+01 
+{5.179223e+01} {}
+dceAveR3_1       5.179223e+01 
+{3.367315e+01} {}
+dceAveR4_1       3.367315e+01 
+{2.400000e+01} {3.490319e+01}
+dceMedFI_1       2.400000e+01 
+{1.596458e+02} {}
+dceSdevFI_1      1.596458e+02 
+{4.770400e+00} {}
+dceDSclFI_1      4.770400e+00 
+{-5.100000e+01} {}
+dceMinFI_1       -5.100000e+01 
+{3.236000e+03} {}
+dceMaxFI_1       3.236000e+03 
+{66444020} {}
+DCEID            66444020 
+{4} {4.223544e+01}
+CHNLNUM          4 
+{0} {}
+ADCEID           0 
+{8} {}
+AFOWLNUM         8 
+{24} {}
+AWAITPER         24 
+{0} {}
+AWEASIDE         0 
+{1} {}
+AREADMOD         1 
+{5.6140632} {}
+AFPAT1B          5.6140632 
+{6.03335} {}
+AFPAT2B          6.03335 
+{0} {}
+APEDSIG          0 
+{0} {}
+ATXSTAT          0 
+{0} {}
+AFLSTAT          0 
+{4} {}
+ASHSTAT          4 
+{-3.2100936} {}
+AVRSTBEG         -3.2100936 
+{-4.4166791} {}
+AVDETBEG         -4.4166791 
+{-3.4615352} {}
+AVGG1BEG         -3.4615352 
+{-3.0022465} {}
+AVDDUBEG         -3.0022465 
+{0} {}
+AVGGCBEG         0 
+{19.919561} {}
+ACTENDT          19.919561 
+{18.919609} {}
+AFPECTE          18.919609 
+{21.463776} {}
+AFPEATE          21.463776 
+{22.266584} {}
+ATCTEMPE         22.266584 
+{19.858599} {}
+ACETEMPE         19.858599 
+{20.132927} {}
+APDTEMPE         20.132927 
+{1.2864438} {}
+ACATMP2E         1.2864438 
+2006/11/30 07:57:37 END   qaloader status=0
+
+qaloader   exit_value =   0    execution_time = 0.030s
+******************************************************************
+Pipeline executing qaloader
+qaloader -i qa/BCD_qatool.qa -tablename qa_iracdp -o qa/qaloader.sql 
+******************************************************************
+2006/11/30 07:57:37 BEGIN qaloader v1.12
+ -i (QA_FILE) qa/BCD_qatool.qa
+ -tablename (TABLENAME) qa_iracdp
+ -o (SQL_FILE) qa/qaloader.sql
+Using metadata version 13.0b
+
+QA values ingested:
+{1.832616e+01} {}
+bcdAveFI_1       1.832616e+01 
+{2.933117e+01} {}
+bcdAveUB_1       2.933117e+01 
+{3.811857e+00} {}
+bcdMedFI_1       3.811857e+00 
+{5.169179e+00} {}
+bcdMedUB_1       5.169179e+00 
+{1.109864e+02} {}
+bcdSdevFI_1      1.109864e+02 
+{1.439313e+02} {}
+bcdSdevUB_1      1.439313e+02 
+{2.997847e+00} {}
+bcdDSclFI_1      2.997847e+00 
+{3.726200e+00} {}
+bcdDSclUB_1      3.726200e+00 
+{-5.508873e+00} {}
+bcdMinFI_1       -5.508873e+00 
+{-1.796848e+00} {}
+bcdMinUB_1       -1.796848e+00 
+{2.037607e+03} {}
+bcdMaxFI_1       2.037607e+03 
+{2.037607e+03} {}
+bcdMaxUB_1       2.037607e+03 
+{3.692036e+00} {}
+bcdC68lFI_1      3.692036e+00 
+{3.935624e+00} {}
+bcdC68uFI_1      3.935624e+00 
+{140691097} {}
+DPID             140691097 
+{4} {1.832616e+01}
+CHNLNUM          4 
+2006/11/30 07:57:38 END   qaloader status=0
+
+qaloader   exit_value =   0    execution_time = 0.060s
+******************************************************************
+Pipeline executing dbaccess
+dbaccess -e sodb qa/qaloader.sql 
+******************************************************************
+set role pipelineswrole;
+set lock mode to wait 30;
+EXECUTE PROCEDURE addQA_iracdce (66444020, NULL, NULL, 4, 4.223544e+01, 
+2.400000e+01, 3.490319e+01, 4.857318e+01, 5.179223e+01, 3.367315e+01, 
+1.596458e+02, 4.770400e+00, -5.100000e+01, 3.236000e+03, 0, 8, 24, 0, 1, 
+5.6140632, 6.03335, 0, 0, 0, 4, -3.2100936, -4.4166791, -3.4615352, -3.0022465, 
+0, 19.919561, 18.919609, 21.463776, 22.266584, 19.858599, 20.132927, 1.2864438, 
+NULL, NULL, NULL, NULL, NULL, NULL);
+EXECUTE PROCEDURE addQA_iracdp (140691097, NULL, NULL, 4, 1.832616e+01, 
+2.933117e+01, 3.811857e+00, 5.169179e+00, 1.109864e+02, 1.439313e+02, 
+2.997847e+00, 3.726200e+00, -5.508873e+00, -1.796848e+00, 2.037607e+03, 
+2.037607e+03, 3.692036e+00, 3.935624e+00, NULL, NULL, NULL, NULL, NULL, NULL);
+execute procedure setDceTimeParameters (66444020, 846547017.322, "2006-10-28 23:54:37.795", 0.32, 0.40);
+
+dbaccess   exit_value =   0    execution_time = 0.040s
+******************************************************************
+Finishing IRAC science pipeline processing
+Could not copy cal/firstframe_corr.fits to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/17/01/1/cal/firstframe_corr.fits
+Could not copy imask.fits to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/17/01/1/imask.fits
+Could not copy muxbleedcorr.fits to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/17/01/1/muxbleedcorr.fits
+Could not copy slremove.fits to /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/17/01/1/slremove.fits
+******************************************************************
+PlScriptID 17 exiting Thu Nov 30 07:57:53 PST 2006
+Host: sopipe42
+Local Processing Directory: /scr3/S14.4.0/IRAC009100/bcd/2082/0020674048/4/0100/0000/17/01/1
+Sandbox Directory: /sbx3/S14.4.0/archive/proc/full/IRAC009100/bcd/2082/0020674048/4/0100/0000/17/01/1
+Processing time: total 11.54 s (user 0.31, system 0.13, child user 9.98, child system 1.12)
+Pipeline exit code: Normal exit (0)
+******************************************************************

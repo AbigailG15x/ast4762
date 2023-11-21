@@ -1,0 +1,11 @@
+Program ID      : 30825
+Request ID      : 20673792
+Request Label   : p30825_IRAC_substare_hd189733_10hr_p2
+
+Target Name     : hd189733_pt2
+Target Position : 0h00m00.00000s, +0d00m00.0000s
+Instrument Mode : IRAC_IER
+Wavelength      : ALL
+Type            : CAL
+
+10 files are successfully retrieved: 1,268,431 B
