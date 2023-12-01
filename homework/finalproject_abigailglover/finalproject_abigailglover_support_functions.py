@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[1]:
 
 
 import os
@@ -51,18 +51,24 @@ def read_and_extract_data(folder_path, start_set, num_sets):
     # Initialize arrays
     data_cube = None
     frame_params_list = []
-    
-    # List all files in the folder
-    file_list = sorted([f for f in os.listdir(folder_path) if f.endswith(".fits")])
-    
+    frame_params_array = np.array([], dtype=[("frame_number", int), ("obs_time", float)])  # Initialize outside the loop
+
+    # Initialize the mask array to True
+    mask_array = np.ones_like(data, dtype=bool)
+
     for i, file_name in enumerate(file_list[start_set * 100: (start_set + num_sets) * 100]):
         file_path = os.path.join(folder_path, file_name)
-        
+
         # (Part c i.) 
         # Read the data and header.
         with fits.open(file_path) as hdul:
             header = hdul[0].header
             data = hdul[0].data
+
+            # Check for blank frames
+            if check_blank_frames and np.all(data == 0):
+                mask_array[i * 64: (i + 1) * 64, :, :] = False  # Flag all pixels as bad
+                continue
             
             # (Part b) 
             # Allocate a 3D data cube
@@ -88,22 +94,21 @@ def read_and_extract_data(folder_path, start_set, num_sets):
                 "frame_number": frame_number,
                 "obs_time": obs_time,
                 "frame_times": frame_times,
-                
             }
             frame_params_list.append(frame_params)
             
+            # Update frame_params_array inside the loop
+            frame_params_array = np.array(
+                [(params["frame_number"], params["obs_time"]) for params in frame_params_list],
+                dtype=[("frame_number", int), ("obs_time", float)])  # Change object to float or int based on your needs
+
             # Print filename and DATE-OBS for every 10th file
             if i % 10 == 0:
                 print("Filename:", file_name)
                 print("DATE-OBS:", header["DATE-OBS"])
                 print()
-    
+
     if data_cube is not None:
-        # Convert frame_params_list to a structured numpy array
-        frame_params_array = np.array(
-            [(params["frame_number"], params["obs_time"]) for params in frame_params_list],
-            dtype=[("frame_number", int), ("obs_time", object)])  # Adjust the dtype as needed
-        
         # Print the shape of arrays
         print("Shape of 3D data cube:", data_cube.shape)
         print("Shape of frame parameters array:", frame_params_array.shape)
@@ -111,4 +116,41 @@ def read_and_extract_data(folder_path, start_set, num_sets):
         print("No FITS files found or folder_path does not exist.")
     
     return data_cube, frame_params_array
+
+
+# In[ ]:
+
+
+import numpy as np
+from astropy.stats import sigma_clip
+
+def sigma_rejection(data, sigma_threshold=5, max_iterations=5):
+    """
+    Apply a sigma-rejection routine using Astropy to identify bad pixels in a data set.
+
+    Parameters:
+    - data: 3D NumPy array representing the data cube.
+    - sigma_threshold: Threshold for flagging pixels as bad (default is 5σ).
+    - max_iterations: Maximum number of iterations (default is 5).
+
+    Returns:
+    - mask_array: Boolean array indicating good (True) and bad (False) pixels.
+    """
+
+    mask_array = np.ones_like(data, dtype=bool)
+
+    for iteration in range(max_iterations):
+        # Calculate the median and standard deviation from the median
+        median_val = np.median(data, axis=0)
+
+        # Use Astropy's sigma_clip to flag pixels more than sigma_threshold from the median
+        clipped_data = sigma_clip(data, sigma=sigma_threshold, axis=0, masked=True)
+
+        # Get the mask array from the masked array produced by sigma_clip
+        mask_array = ~clipped_data.mask
+
+        # Recalculate the median using only unflagged pixels
+        data = data[mask_array]
+
+    return mask_array
 
